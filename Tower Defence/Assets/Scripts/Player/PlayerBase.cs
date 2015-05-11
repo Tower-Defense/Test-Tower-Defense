@@ -9,15 +9,12 @@ public class PlayerBase : MonoBehaviour {
 		//connect to levelmaster
 		levelMaster = GameObject.FindWithTag ("LevelMaster").GetComponent <LevelMaster>();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
 	void OnTriggerEnter(Collider other) {
+		Debug.Log("Trigger");
 		if (other.gameObject.tag == "Ground Enemy" 
 		    || other.gameObject.tag == "Air Enemy") {
+			Debug.Log("Boom");
 			Destroy(other.gameObject);
 			levelMaster.enemyCount--;
 			levelMaster.healthCount--;

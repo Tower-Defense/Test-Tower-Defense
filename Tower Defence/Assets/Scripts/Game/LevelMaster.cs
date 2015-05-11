@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LevelMaster : MonoBehaviour {
+public class LevelMaster : MonoBehaviour  {
 
 	// From pathfinding
 	public AstarPath AstarController;
@@ -85,6 +85,21 @@ public class LevelMaster : MonoBehaviour {
 	
 
 	//---
+
+	// ThreadSafe singletone
+//	private LevelMaster(){}
+//	private static LevelMaster instance;
+//	public static LevelMaster Instance
+//	{
+//		get 
+//		{
+//			// Here we use the ?? operator, to return 'instance' if 'instance' does not equal null
+//			// otherwise we assign instance to a new component and return that
+//			return instance ?? 
+//				(instance = new GameObject("LevelMaster").AddComponent<LevelMaster>()); 
+//		}
+//	}
+
 
 	// Use this for initialization
 	void Start () {

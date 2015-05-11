@@ -10,7 +10,7 @@ TagManager:
   - PlacementPlane_Open
   - PlacementPlane_Taken
   - Ground Enemy
-  - GroundTargetObject
+  - PlayerBase
   layers:
   - Default
   - TransparentFX
@@ -45,6 +45,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 3051346999
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

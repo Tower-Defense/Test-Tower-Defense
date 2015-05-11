@@ -20,7 +20,7 @@ public class Enemy_GroundUnit : Enemy_Base {
 
 	// Use this for initialization
 	void Start () {
-		targetPosition = GameObject.FindWithTag ("GroundTargetObject").transform.position;
+		targetPosition = GameObject.FindWithTag ("PlayerBase").transform.position;
 		GetNewPath ();	
 	
 	}
@@ -43,8 +43,6 @@ public class Enemy_GroundUnit : Enemy_Base {
 		}
 		// reached end of path?
 		if (currentWaypoint >= path.vectorPath.Count) {
-			levelMaster.healthCount --;
-			Explode();
 			return;
 		}
 		
@@ -58,7 +56,7 @@ public class Enemy_GroundUnit : Enemy_Base {
 		
 		//rotate to face next waypoint
 		tankCompass.LookAt (path.vectorPath [currentWaypoint]);
-		tankBody.rotation = Quaternion.Lerp (tankBody.rotation, 
+		transform.rotation = Quaternion.Lerp (transform.rotation, 
 		                                     tankCompass.rotation, 
 		                                     Time.deltaTime * turnSpeed);
 		
