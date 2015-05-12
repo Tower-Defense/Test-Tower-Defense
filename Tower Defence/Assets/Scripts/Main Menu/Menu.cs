@@ -34,4 +34,19 @@ public class Menu : MonoBehaviour {
 		}
 
 	}
+
+	public void QuitGame()
+	{
+		Application.Quit ();
+	}
+	
+	public void StartLevel(int level)
+	{
+		Application.LoadLevel (level);
+	}
+	
+	public void NewGame()
+	{
+		Application.LoadLevel (1);
+	}
 }

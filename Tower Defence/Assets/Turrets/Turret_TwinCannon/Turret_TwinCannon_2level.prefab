@@ -447,7 +447,7 @@ MonoBehaviour:
   turnSpeed: 10
   firePauseTime: .125
   muzzleEffect: {fileID: 100000, guid: 9277dd294e33ad84ca186bc58a47ca14, type: 2}
-  errorAmount: 2
+  errorAmount: .00999999978
   myTarget: {fileID: 0}
   muzzlePositions:
   - {fileID: 446424}

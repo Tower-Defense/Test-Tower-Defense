@@ -11,13 +11,13 @@ public class PlayerBase : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other) {
-		Debug.Log("Trigger");
+	//	Debug.Log("Trigger");
 		if (other.gameObject.tag == "Ground Enemy" 
 		    || other.gameObject.tag == "Air Enemy") {
-			Debug.Log("Boom");
+	//		Debug.Log("Boom");
 			Destroy(other.gameObject);
 			levelMaster.enemyCount--;
-			levelMaster.healthCount--;
+			levelMaster.livesCount--;
 			levelMaster.UpdateGUI ();
 		}
 	}

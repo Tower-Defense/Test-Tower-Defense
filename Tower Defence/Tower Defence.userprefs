@@ -1,9 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Main Menu\Menu.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Game\LoadingScreen.cs">
     <Files>
-      <File FileName="Assets\Scripts\Main Menu\Menu.cs" Line="31" Column="1" />
-      <File FileName="Assets\Scripts\Main Menu\MenuManager.cs" Line="17" Column="22" />
+      <File FileName="Assets\Scripts\Game\Pause.cs" Line="21" Column="23" />
+      <File FileName="Assets\Scripts\Main Menu\MenuManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Game\LoadingScreen.cs" Line="20" Column="3" />
+      <File FileName="Assets\Scripts\Game\LevelMaster.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Player\PlayerBase.cs" Line="20" Column="21" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

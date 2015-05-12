@@ -110,7 +110,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2144331}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -393.265991, y: -159.461273, z: -55.1068306}
+  m_LocalPosition: {x: -788.936157, y: -360, z: -55.1068649}
   m_LocalScale: {x: 160, y: 160, z: 160}
   m_Children:
   - {fileID: 8276112}
@@ -243,18 +243,18 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 1
+    e00: 2.25
     e01: 0
     e02: 0
-    e03: 3.95791245
+    e03: 6.44281912
     e10: 0
-    e11: 1
+    e11: 2.25
     e12: 0
-    e13: 1
+    e13: 2.24401593
     e20: 0
     e21: 0
-    e22: 1
-    e23: .344417691
+    e22: 2.25
+    e23: .3444179
     e30: 0
     e31: 0
     e32: 0
@@ -938,7 +938,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   astarData:
-    dataString: UEsDBBQAAAgIAAAYIew/2OlT9gEAANcDAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFdUstu2zAQ/JWCZyegFMuvW2InToG0MeIUPdPUyiJMkQIf9SPwv3dJybKViwDt7M7OzPKLbL3IyeyL/GPSA5mRdJwzno3TJJs+FNNseFekfFMwmIwzSpMRTch5QJitgbsP5oQms2RAhNUVOCP4o9pKZKED4pUotKme8y3MtXWWzAomLQyI0S7MqbD0EFuP8XvCL1JzUA5MCw5pA9+l9+PRmD6MYls6yc5hAZesqiFfixO0/QltB0Y0cCmdQ4NmSKylFLZd7I51MDtntfUoeEBywdBBWIx2ShDb0uGim6n3orDgolLDjgthMIBIRp60K5GhYnZ3E2RKh5PzhepXH0toOkSsMLp6bVclQbgrBd99sCNn1nV53RYXtyq92jO5YxsJf0tQv/XSaK/wls54HPMW0kVH0tmYl8B3l55GXK/k695dkvYu5+DvMJei2uDvPU2u/48HYWMjFtZSh1ynOAwGw/+JWuOxbSTEWtDwx8In215fRFt+EcY6BCIZ806/CbVbGpFfOy/VhbDuTVQiBod3Dj422hvsJM8xULTs3VwbBaHYeKtBMemOK9zm+hf9hnT7vtVfGHe6Cb9F2vfeb4/FrpfSPrDS+/aAQiErk6sGjEIwPnWRq/DW6Cck8GNpWB0eWW7YfilOle5MCVXoNTcA6r2bPf8HUEsDBBQAAAgIAAAYIewofhiqQwAAAEgAAAASACQAZ3JhcGgwX2VkaXRvci5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1bKyU/OTk1RsiopKk3VUSrOyC93rSgpSlSySkvMKQaKlKRWlJQWpYZlFmcm5aTC1BVkluWXKFkpOafmlaQWKdUCAFBLAwQUAAAICAAAGCHs4NokHXYAAACDAAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAR2MsQ6CMBQA/+XN2LTFUmFlYDPuhuFJX+ENtqQUE2P8d6nbDXf3gReljWOADmrRCA0VzAnXZYNOHbizO+gO2jqcjNXKtLVvzfnk9fTwSBdrpFSNVDBWkN8rXfFJ/+KGefEcHIdZDIndUK7FCtFRH/eQiybH7w9QSwECLQAUAAAICAAAGCHsP9jpU/YBAADXAwAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAGCHsKH4YqkMAAABIAAAAEgAkAAAAAAAAAAAAAABDAgAAZ3JhcGgwX2VkaXRvci5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAABgh7ODaJB12AAAAgwAAAAkAJAAAAAAAAAAAAAAA2gIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAwADABwBAACbAwAAAAA=
+    dataString: UEsDBBQAAAgIAAAYIey29a1c/AEAANsDAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFdUtuO2jAQ/ZXKz4CcQLi9bWGXVtp20bJVn40zIRaOHflSLiv+vWMTAtmXSJlz5sycM/4kOy9yMv8k/5j0QOYkneSMZ5M0yWbDYpaN+kXKtwWD6SSjNBnThFx6hNkauHtnTmgyT3pEWF2BM4I/qZ1EFdojXolCm+o538FCW2fJvGDSQo8Y7UKfCkOPkXqK3zN+UZqDcmAasD8cpLNsNppGUj8dTMYTOhxH8ii7hClcsqqGfCPO0DSlaRbpSRr0lM7hCg5RXEspbDPcnepgeMFq63HpHskFQxdhOFoqQexKh2oPXW9FYcHFbQ07LYXBEKIY+a5diQoVs/uHMFM6ml5uUr+6WELTEWKF0dWPZlRCUdiVgu/f2Ykz69rMHovLxy29OjC5Z1sJf0tQv/XKaK/wns54bPMW0mUr0tpYlMD3N851uU7J153bJM1tLsHfcSFFtcXfAU3u/09HYSMRCxupQ64zbAaD4f/EXePBbRTEWtjhj4UPtru/iqb8Iox1CEQx5p1+FWq/MiK/M2/VpbDuVVQiBod3Dj622htkkucYKFr2bqGNglC8eqtBMelOa5zmuhf9grTzvtRfGHf6Gn6DNG++S4/FlktpF1jrQ3NAoVCVyfUVjItgfOq2rsJbo5+QwLeVYXV4ZLlhh5U4V7o1JVShN9wAqLe29/IfUEsDBBQAAAgIAAAYIewofhiqQwAAAEgAAAASACQAZ3JhcGgwX2VkaXRvci5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1bKyU/OTk1RsiopKk3VUSrOyC93rSgpSlSySkvMKQaKlKRWlJQWpYZlFmcm5aTC1BVkluWXKFkpOafmlaQWKdUCAFBLAwQUAAAICAAAGCHs4NokHXYAAACDAAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAR2MsQ6CMBQA/+XN2LTFUmFlYDPuhuFJX+ENtqQUE2P8d6nbDXf3gReljWOADmrRCA0VzAnXZYNOHbizO+gO2jqcjNXKtLVvzfnk9fTwSBdrpFSNVDBWkN8rXfFJ/+KGefEcHIdZDIndUK7FCtFRH/eQiybH7w9QSwECLQAUAAAICAAAGCHstvWtXPwBAADbAwAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAGCHsKH4YqkMAAABIAAAAEgAkAAAAAAAAAAAAAABJAgAAZ3JhcGgwX2VkaXRvci5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAABgh7ODaJB12AAAAgwAAAAkAJAAAAAAAAAAAAAAA4AIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAwADABwBAAChAwAAAAA=
     upgradeData: 
     data_backup: 
     file_cachedStartup: {fileID: 0}
@@ -1112,7 +1112,7 @@ MonoBehaviour:
   waveActive: 0
   spawnEnemies: 0
   upgradePanelOpen: 0
-  healthCount: 10
+  livesCount: 10
   scoreCount: 0
   cashCount: 1000
   waveLevel: 0
@@ -1141,7 +1141,7 @@ MonoBehaviour:
   - {fileID: 971882546}
   - {fileID: 166625734}
   waveText: {fileID: 248386203}
-  healthText: {fileID: 1843639444}
+  livesText: {fileID: 1843639444}
   scoreText: {fileID: 1088669794}
   cashText: {fileID: 1181642846}
   upgradeText: {fileID: 1682292817}
@@ -3065,6 +3065,74 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: e1a32b7a0f534634fb512ee418a7e833, type: 2}
   m_PrefabInternal: {fileID: 312834350}
+--- !u!1 &324370677
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 324370678}
+  - 114: {fileID: 324370679}
+  m_Layer: 8
+  m_Name: Panel_Top
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &324370678
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 324370677}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2092392876}
+  m_Father: {fileID: 686843611}
+  m_RootOrder: 2
+--- !u!114 &324370679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 324370677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae942c9068183dc40a9d01f648273726, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortByDepth: 1
+  showInPanelTool: 1
+  generateNormals: 0
+  depthPass: 0
+  widgetsAreStatic: 0
+  cullWhileDragging: 0
+  worldToLocal:
+    e00: 360
+    e01: 0
+    e02: 0
+    e03: 1.91489184
+    e10: 0
+    e11: 360
+    e12: 0
+    e13: -.95744133
+    e20: 0
+    e21: 0
+    e22: 360
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 1
+  mAlpha: 1
+  mDebugInfo: 1
+  mClipping: 0
+  mClipRange: {x: 0, y: 0, z: 0, w: 0}
+  mClipSoftness: {x: 40, y: 40}
 --- !u!1001 &339167626
 Prefab:
   m_ObjectHideFlags: 0
@@ -6128,11 +6196,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 686843610}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -.538721085, z: 0}
+  m_LocalPosition: {x: -1.91489184, y: .95744133, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1888996346}
   - {fileID: 1883225524}
+  - {fileID: 324370678}
   m_Father: {fileID: 1480252241}
   m_RootOrder: 0
 --- !u!114 &686843612
@@ -6856,6 +6925,45 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: e1a32b7a0f534634fb512ee418a7e833, type: 2}
   m_PrefabInternal: {fileID: 751127060}
+--- !u!1 &762684591
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 762684593}
+  - 114: {fileID: 762684592}
+  m_Layer: 0
+  m_Name: GameSettings
+  m_TagString: Untagged
+  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &762684592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 762684591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08fb521087f26ab4ab4542dc0758a53f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &762684593
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 762684591}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.455336332, y: .697268128, z: -.0772314072}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
 --- !u!1001 &767586411
 Prefab:
   m_ObjectHideFlags: 0
@@ -8078,17 +8186,17 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 160
+    e00: 360
     e01: 0
     e02: 0
-    e03: 0
+    e03: 1.91489184
     e10: 0
-    e11: 160
+    e11: 360
     e12: 0
-    e13: -449.461273
+    e13: -450.957428
     e20: 0
     e21: 0
-    e22: 160
+    e22: 360
     e23: 0
     e30: 0
     e31: 0
@@ -10205,7 +10313,7 @@ Transform:
   m_GameObject: {fileID: 1175378242}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .00625000009, y: .00625000009, z: .00625000009}
+  m_LocalScale: {x: .00277777785, y: .00277777785, z: .00277777785}
   m_Children:
   - {fileID: 1480252241}
   m_Father: {fileID: 0}
@@ -10228,17 +10336,17 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 160
+    e00: 360
     e01: 0
     e02: 0
     e03: 0
     e10: 0
-    e11: 160
+    e11: 360
     e12: 0
     e13: 0
     e20: 0
     e21: 0
-    e22: 160
+    e22: 360
     e23: 0
     e30: 0
     e31: 0
@@ -12657,7 +12765,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1511150401}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 393.265991, y: -159.461273, z: -55.1068306}
+  m_LocalPosition: {x: 790.851135, y: -360, z: -55.1068649}
   m_LocalScale: {x: 160, y: 160, z: 160}
   m_Children:
   - {fileID: 1046666082}
@@ -12923,7 +13031,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1529051540}
   m_LocalRotation: {x: .408217937, y: -.234569728, z: .109381676, w: .875426054}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 9.60000038, y: 11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -13083,7 +13191,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: .5
+  m_Radius: .300000012
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -14188,6 +14296,7 @@ MonoBehaviour:
   m_Script: {fileID: 1997211142, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_AllowActivationOnStandalone: 0
 --- !u!114 &1692221215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14199,6 +14308,12 @@ MonoBehaviour:
   m_Script: {fileID: 1077351063, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_AllowActivationOnMobileDevice: 0
 --- !u!114 &1692221216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14210,6 +14325,9 @@ MonoBehaviour:
   m_Script: {fileID: -619905303, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 5
 --- !u!4 &1692221217
 Transform:
   m_ObjectHideFlags: 0
@@ -15744,7 +15862,7 @@ GameObject:
   - 4: {fileID: 1843639443}
   - 114: {fileID: 1843639444}
   m_Layer: 8
-  m_Name: Health
+  m_Name: Lives
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15777,7 +15895,7 @@ MonoBehaviour:
   mPivot: 4
   mDepth: 1
   mFont: {fileID: 11456596, guid: 83b551710d7a0334689facbb7d9f5335, type: 2}
-  mText: 'HEALTH: 0'
+  mText: 'LIVES: 0'
   mMaxLineWidth: 0
   mMaxLineHeight: 0
   mEncoding: 1
@@ -15849,7 +15967,7 @@ GameObject:
   - 4: {fileID: 1888996346}
   - 114: {fileID: 1888996347}
   m_Layer: 8
-  m_Name: Panel
+  m_Name: Panel_Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15887,17 +16005,17 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 160
+    e00: 360
     e01: 0
     e02: 0
-    e03: 0
+    e03: 1.91489184
     e10: 0
-    e11: 160
+    e11: 360
     e12: 0
-    e13: .538721085
+    e13: -.95744133
     e20: 0
     e21: 0
-    e22: 160
+    e22: 360
     e23: 0
     e30: 0
     e31: 0
@@ -17291,6 +17409,53 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: e1a32b7a0f534634fb512ee418a7e833, type: 2}
   m_PrefabInternal: {fileID: 2091545206}
+--- !u!1 &2092392875
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2092392876}
+  - 114: {fileID: 2092392877}
+  m_Layer: 8
+  m_Name: Anchor_TopLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2092392876
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2092392875}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -788.936157, y: 360, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 324370678}
+  m_RootOrder: 0
+--- !u!114 &2092392877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2092392875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8077b76001d36d489868d20d28bddb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiCamera: {fileID: 1480252242}
+  widgetContainer: {fileID: 0}
+  panelContainer: {fileID: 0}
+  side: 2
+  halfPixelOffset: 1
+  runOnlyOnce: 0
+  relativeOffset: {x: 0, y: 0}
+  pixelOffset: {x: 0, y: 0}
 --- !u!1001 &2098543522
 Prefab:
   m_ObjectHideFlags: 0

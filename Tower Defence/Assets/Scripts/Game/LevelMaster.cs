@@ -12,7 +12,7 @@ public class LevelMaster : MonoBehaviour  {
 	public bool upgradePanelOpen = false;
 
 	//Player variables
-	public int healthCount = 10;
+	public int livesCount = 10;
 	public int scoreCount = 0;
 	public int cashCount = 200;
 
@@ -55,7 +55,7 @@ public class LevelMaster : MonoBehaviour  {
 
 	//GUI Variables
 	public UILabel waveText;
-	public UILabel healthText;
+	public UILabel livesText;
 	public UILabel scoreText;
 	public UILabel cashText;
 	public UILabel upgradeText;
@@ -377,7 +377,7 @@ public class LevelMaster : MonoBehaviour  {
 
 		waveText.text = "Wave: " + waveLevel;
 		scoreText.text = "Score: " + scoreCount;
-		healthText.text = "Health: " + healthCount;
+		livesText.text = "Lives: " + livesCount;
 		cashText.text = "Cash: " + cashCount + "$";
 
 		CheckTurretCosts ();
