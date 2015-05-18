@@ -66,7 +66,7 @@ public class MultiPlayer : MonoBehaviour {
 	void OnPlayerDisconnected(NetworkPlayer player) {
 		// GUI
 		UpdateConnection(false);
-
+		// Network
 		Network.RemoveRPCs(player);
 		Network.DestroyPlayerObjects(player);
 	}
