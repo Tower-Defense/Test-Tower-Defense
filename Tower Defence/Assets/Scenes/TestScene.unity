@@ -110,7 +110,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2144331}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -371.999329, y: -163, z: -55.1068535}
+  m_LocalPosition: {x: -394.999969, y: -188, z: -55.1068802}
   m_LocalScale: {x: 160, y: 160, z: 160}
   m_Children:
   - {fileID: 8276112}
@@ -243,18 +243,18 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 1.01875007
+    e00: 1.17500007
     e01: 0
     e02: 0
-    e03: 3.8218751
+    e03: 3.96874976
     e10: 0
-    e11: 1.01875007
+    e11: 1.17500007
     e12: 0
-    e13: 1.01875007
+    e13: 1.17500007
     e20: 0
     e21: 0
-    e22: 1.01875007
-    e23: .34441784
+    e22: 1.17500007
+    e23: .344418019
     e30: 0
     e31: 0
     e32: 0
@@ -938,7 +938,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   astarData:
-    dataString: UEsDBBQAAAgIAAAgIezDauFF/AEAANsDAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFdUl1v4jAQ/CsnPwNyAoHCWwstPal3RaWnezbOhlg4duSP46Piv9/ahED6Eikzs7O7s/4iWy9yMvsi/5j0QGYkneSMZ5M0yabDYpqN+kXKNwWDh0lGaTKmCTn3CLM1cPfBnNBklvSIsLoCZwR/VFuJLrRHvBKFNtVzvoW5ts6SWcGkhR4x2oU6FZoeovQYvyf8ojUH5cA0ZH84SKfZNEuiqJ8OJuMJHY6jeJSdQxcuWVVDvhYnaIrSNIvyJA1+SudwIYdorqUUtmnujnVYeM5q63HoHskFwy1Cc+xXgtiWDt3uqt6LwoKL0xp2XAiDIUQz8qRdiQ4Vs7u7MFM6ejhfrX51uYSmI+QKo6vXplVC0diVgu8+2JEz69rM7sHF/ZRe7ZncsY2EvyWo33pptFd4T2c8lnkL6aI1adeYl8B3V81luA7k685tkuY257DfYS5FtcHfAU1u/48HYaMQgbXUIdcpFoPB8H/irPHgNhoiFmb4Y+GTbW+vooFfhLEOiWjGvNNvQu2WRuQ35RVdCOveRCVicHjnsMdGe4NK8hwDxZW9m2ujIICX3WpQTLrjCru57kW/MW2/b/gL405fwm+Y5s135RFstZR2iZXeNwcUCl2ZXF3IOAjGp67jKrw17hMS+LE0rA6PLDdsvxSnSrdLCVXoNTcA6r2tPf8HUEsDBBQAAAgIAAAgIewofhiqQwAAAEgAAAASACQAZ3JhcGgwX2VkaXRvci5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1bKyU/OTk1RsiopKk3VUSrOyC93rSgpSlSySkvMKQaKlKRWlJQWpYZlFmcm5aTC1BVkluWXKFkpOafmlaQWKdUCAFBLAwQUAAAICAAAICHs4NokHXYAAACDAAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAR2MsQ6CMBQA/+XN2LTFUmFlYDPuhuFJX+ENtqQUE2P8d6nbDXf3gReljWOADmrRCA0VzAnXZYNOHbizO+gO2jqcjNXKtLVvzfnk9fTwSBdrpFSNVDBWkN8rXfFJ/+KGefEcHIdZDIndUK7FCtFRH/eQiybH7w9QSwECLQAUAAAICAAAICHsw2rhRfwBAADbAwAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAICHsKH4YqkMAAABIAAAAEgAkAAAAAAAAAAAAAABJAgAAZ3JhcGgwX2VkaXRvci5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAACAh7ODaJB12AAAAgwAAAAkAJAAAAAAAAAAAAAAA4AIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAwADABwBAAChAwAAAAA=
+    dataString: UEsDBBQAAAgIAAAYIezDauFF/AEAANsDAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFdUl1v4jAQ/CsnPwNyAoHCWwstPal3RaWnezbOhlg4duSP46Piv9/ahED6Eikzs7O7s/4iWy9yMvsi/5j0QGYkneSMZ5M0yabDYpqN+kXKNwWDh0lGaTKmCTn3CLM1cPfBnNBklvSIsLoCZwR/VFuJLrRHvBKFNtVzvoW5ts6SWcGkhR4x2oU6FZoeovQYvyf8ojUH5cA0ZH84SKfZNEuiqJ8OJuMJHY6jeJSdQxcuWVVDvhYnaIrSNIvyJA1+SudwIYdorqUUtmnujnVYeM5q63HoHskFwy1Cc+xXgtiWDt3uqt6LwoKL0xp2XAiDIUQz8qRdiQ4Vs7u7MFM6ejhfrX51uYSmI+QKo6vXplVC0diVgu8+2JEz69rM7sHF/ZRe7ZncsY2EvyWo33pptFd4T2c8lnkL6aI1adeYl8B3V81luA7k685tkuY257DfYS5FtcHfAU1u/48HYaMQgbXUIdcpFoPB8H/irPHgNhoiFmb4Y+GTbW+vooFfhLEOiWjGvNNvQu2WRuQ35RVdCOveRCVicHjnsMdGe4NK8hwDxZW9m2ujIICX3WpQTLrjCru57kW/MW2/b/gL405fwm+Y5s135RFstZR2iZXeNwcUCl2ZXF3IOAjGp67jKrw17hMS+LE0rA6PLDdsvxSnSrdLCVXoNTcA6r2tPf8HUEsDBBQAAAgIAAAYIewofhiqQwAAAEgAAAASACQAZ3JhcGgwX2VkaXRvci5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1bKyU/OTk1RsiopKk3VUSrOyC93rSgpSlSySkvMKQaKlKRWlJQWpYZlFmcm5aTC1BVkluWXKFkpOafmlaQWKdUCAFBLAwQUAAAICAAAGCHs4NokHXYAAACDAAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAR2MsQ6CMBQA/+XN2LTFUmFlYDPuhuFJX+ENtqQUE2P8d6nbDXf3gReljWOADmrRCA0VzAnXZYNOHbizO+gO2jqcjNXKtLVvzfnk9fTwSBdrpFSNVDBWkN8rXfFJ/+KGefEcHIdZDIndUK7FCtFRH/eQiybH7w9QSwECLQAUAAAICAAAGCHsw2rhRfwBAADbAwAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAGCHsKH4YqkMAAABIAAAAEgAkAAAAAAAAAAAAAABJAgAAZ3JhcGgwX2VkaXRvci5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAABgh7ODaJB12AAAAgwAAAAkAJAAAAAAAAAAAAAAA4AIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAwADABwBAAChAwAAAAA=
     upgradeData: 
     data_backup: 
     file_cachedStartup: {fileID: 0}
@@ -1025,7 +1025,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 0
 --- !u!1001 &85434498
 Prefab:
   m_ObjectHideFlags: 0
@@ -1166,7 +1166,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 1
 --- !u!1001 &122343613
 Prefab:
   m_ObjectHideFlags: 0
@@ -1546,7 +1546,7 @@ Transform:
   - {fileID: 1151904567}
   - {fileID: 1508015258}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 9
 --- !u!1001 &138540061
 Prefab:
   m_ObjectHideFlags: 0
@@ -3112,17 +3112,17 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 163
+    e00: 188
     e01: 0
     e02: 0
-    e03: -.499318838
+    e03: 0
     e10: 0
-    e11: 163
+    e11: 188
     e12: 0
     e13: 0
     e20: 0
     e21: 0
-    e22: 163
+    e22: 188
     e23: 0
     e30: 0
     e31: 0
@@ -5198,6 +5198,48 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: e1a32b7a0f534634fb512ee418a7e833, type: 2}
   m_PrefabInternal: {fileID: 573016930}
+--- !u!1 &576706252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 576706253}
+  - 114: {fileID: 576706254}
+  m_Layer: 0
+  m_Name: _Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &576706253
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 576706252}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+--- !u!114 &576706254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 576706252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36ed1fee26a15bd4babac3506dc8aeaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomName: Room Name
+  playerPrefabName: goblin
+  spawnPoint: {fileID: 1740194277}
 --- !u!1001 &576816996
 Prefab:
   m_ObjectHideFlags: 0
@@ -6196,7 +6238,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 686843610}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .499318838, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1888996346}
@@ -6963,7 +7005,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 13
 --- !u!1001 &767586411
 Prefab:
   m_ObjectHideFlags: 0
@@ -8186,17 +8228,17 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 163
+    e00: 188
     e01: 0
     e02: 0
-    e03: -.499318838
+    e03: 0
     e10: 0
-    e11: 163
+    e11: 188
     e12: 0
     e13: -450
     e20: 0
     e21: 0
-    e22: 163
+    e22: 188
     e23: 0
     e30: 0
     e31: 0
@@ -10313,11 +10355,11 @@ Transform:
   m_GameObject: {fileID: 1175378242}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .00613496918, y: .00613496918, z: .00613496918}
+  m_LocalScale: {x: .00531914877, y: .00531914877, z: .00531914877}
   m_Children:
   - {fileID: 1480252241}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
 --- !u!114 &1175378244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10336,17 +10378,17 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 163
+    e00: 188
     e01: 0
     e02: 0
     e03: 0
     e10: 0
-    e11: 163
+    e11: 188
     e12: 0
     e13: 0
     e20: 0
     e21: 0
-    e22: 163
+    e22: 188
     e23: 0
     e30: 0
     e31: 0
@@ -12765,7 +12807,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1511150401}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 371.000671, y: -163, z: -55.1068535}
+  m_LocalPosition: {x: 394.999969, y: -188, z: -55.1068802}
   m_LocalScale: {x: 160, y: 160, z: 160}
   m_Children:
   - {fileID: 1046666082}
@@ -12921,7 +12963,7 @@ Transform:
   m_LocalScale: {x: 23.7499542, y: 1, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 8
 --- !u!1001 &1528099315
 Prefab:
   m_ObjectHideFlags: 0
@@ -13035,7 +13077,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 6
 --- !u!1001 &1541589776
 Prefab:
   m_ObjectHideFlags: 0
@@ -13213,7 +13255,7 @@ Transform:
   m_LocalScale: {x: 1.72499955, y: 14.6400089, z: 2.3999989}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
 --- !u!114 &1542202607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13479,7 +13521,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 485324, guid: aa729b5fb3bd0fe42bd4089abdccf273, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2387486, guid: aa729b5fb3bd0fe42bd4089abdccf273, type: 2}
       propertyPath: m_ReceiveShadows
@@ -14339,7 +14381,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 7
 --- !u!1001 &1699023599
 Prefab:
   m_ObjectHideFlags: 0
@@ -14881,6 +14923,33 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: e1a32b7a0f534634fb512ee418a7e833, type: 2}
   m_PrefabInternal: {fileID: 1736101337}
+--- !u!1 &1740194276
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1740194277}
+  m_Layer: 0
+  m_Name: _SpawnPointTest
+  m_TagString: Untagged
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1740194277
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1740194276}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.79999995, y: 0, z: 14.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
 --- !u!1001 &1751375081
 Prefab:
   m_ObjectHideFlags: 0
@@ -15289,7 +15358,7 @@ Transform:
   m_LocalScale: {x: 1, y: 0, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 5
 --- !u!114 &1775916735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16005,17 +16074,17 @@ MonoBehaviour:
   widgetsAreStatic: 0
   cullWhileDragging: 0
   worldToLocal:
-    e00: 163
+    e00: 188
     e01: 0
     e02: 0
-    e03: -.499318838
+    e03: 0
     e10: 0
-    e11: 163
+    e11: 188
     e12: 0
     e13: 0
     e20: 0
     e21: 0
-    e22: 163
+    e22: 188
     e23: 0
     e30: 0
     e31: 0
@@ -16382,7 +16451,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 494180, guid: a855ad2005625e04fae8fa5754ad212e, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a855ad2005625e04fae8fa5754ad212e, type: 2}
@@ -17346,7 +17415,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2092392875}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -371.999329, y: 163, z: 0}
+  m_LocalPosition: {x: -394.999969, y: 188, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 324370678}

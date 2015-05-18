@@ -358,6 +358,7 @@
      <Compile Include="Assets\Scripts\Main Menu\MultiPlayer\MultiPlayer.cs" />
      <Compile Include="Assets\Scripts\Main Menu\MultiPlayer\SelectionButton.cs" />
      <Compile Include="Assets\Scripts\Main Menu\MultiPlayer\SelectionGrid.cs" />
+     <Compile Include="Assets\Scripts\Network\NetworkManager.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerBase.cs" />
      <Compile Include="Assets\Scripts\Projectile\Projectile_Base.cs" />
      <Compile Include="Assets\Scripts\Projectile\Projectile_Cannon.cs" />

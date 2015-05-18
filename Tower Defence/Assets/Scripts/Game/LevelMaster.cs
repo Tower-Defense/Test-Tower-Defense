@@ -296,15 +296,15 @@ public class LevelMaster : MonoBehaviour  {
 		{
 		case "Air Enemy": 
 			spawnChoice = Random.Range (0, flyerSpawnPoints.Length);
-			Instantiate (enemyPrefabs [enemyChoice], 
+			PhotonNetwork.Instantiate (enemyPrefabs [enemyChoice].name, 
 			             flyerSpawnPoints [spawnChoice].position, 
-			             flyerSpawnPoints [spawnChoice].rotation);
+			             flyerSpawnPoints [spawnChoice].rotation, 0);
 			break;
 		case "Ground Enemy":
 			spawnChoice = Random.Range (0, groundSpawnPoints.Length);
-			Instantiate (enemyPrefabs [enemyChoice], 
+			PhotonNetwork.Instantiate (enemyPrefabs [enemyChoice].name, 
 			             groundSpawnPoints [spawnChoice].position, 
-			             groundSpawnPoints [spawnChoice].rotation);
+			             groundSpawnPoints [spawnChoice].rotation, 0);
 			break;
 
 		default:

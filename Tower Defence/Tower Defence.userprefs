@@ -1,8 +1,10 @@
-﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\..\..\Desktop\Tower Defence\Assets\Photon Unity Networking\Demos\DemoWorker\Scripts\WorkerInGame.cs">
+﻿<Properties GitUserInfo="UsingGIT">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Game\LevelMaster.cs">
     <Files>
-      <File FileName="..\..\..\..\Desktop\Tower Defence\Assets\Photon Unity Networking\Demos\DemoWorker\Scripts\WorkerInGame.cs" Line="21" Column="5" />
+      <File FileName="Assets\Scripts\Network\NetworkManager.cs" Line="20" Column="3" />
+      <File FileName="Assets\Scripts\Game\LevelMaster.cs" Line="301" Column="61" />
+      <File FileName="Assets\Scripts\Player\PlayerBase.cs" Line="18" Column="26" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
