@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class NetworkManager : MonoBehaviour {
+public class NetworkManager : Photon.MonoBehaviour {
 
 	const string VERSION = "v0.0.1";
 	public string roomName = "Room Name";
@@ -10,7 +10,8 @@ public class NetworkManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+        // don't auto connect to lobby
+        PhotonNetwork.autoJoinLobby = false;
 		PhotonNetwork.ConnectUsingSettings (VERSION);
 	
 	}
@@ -21,6 +22,6 @@ public class NetworkManager : MonoBehaviour {
 	}
 
 	void OnJoinedRoom() {
-		PhotonNetwork.Instantiate(playerPrefabName, spawnPoint.position, Quaternion.identity, 0);
+	//	PhotonNetwork.Instantiate(playerPrefabName, spawnPoint.position, Quaternion.identity, 0);
 	}
 }

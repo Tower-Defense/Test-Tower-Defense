@@ -3,276 +3,201 @@ using System.Collections;
 using UnityEngine.UI;
 using System;
 
-public class MultiPlayer : MonoBehaviour {
-	
+public class MultiPlayer : Photon.MonoBehaviour
+{
+    //--- Start/Join room
+    public Text PlayerName;
+    public Text RoomName;
+    public Toggle IsVisible;
 
-	//--- Master Server settings
-	public string masterServerIp = "52.17.244.15";
-	public int masterServerPort = 23466;
-	public int facilitatorPort = 50005;
-	private string gameTypeName = "My room";
-	//---
+    public Button Btn_CreateRoom;
+    public Button Btn_JoinRoom;
+    public Button Btn_JoinRandom;
 
-	//--- Start server settings
-	public Text serverPort;
-	public Text serverName;
-	public Text serverDescription;
+    public InfoPanel infoPanel;
 
-	public Text serverIP;
-	public Text connection;
-	public Button Btn_startServer;
-	public Button Btn_shutdownServer;
-	public Button Btn_startGame;
-	//---
+    public int levelNum = 1;
+    //---
 
-	//--- Connection settings
-	public Text connectPort;
-	public Text connectIP;
+    //---Server Browser
+    public GameObject RowPrefab;
+    public GameObject GridDataBrowser;
+    //---
 
-	public Text connectionInfo;
-	public GameObject infoPanel;
-
-	private const int maxConnections = 1;
-	private int port;
-	private string ip;
-	//---
-
-	//---Server Browser
-	public GameObject row;
-	public GameObject grid;
-	public GameObject passwordFrame;
-	//---
-	
-
-	#region Network messages
-	void OnConnectedToServer()
-	{
-		connectionInfo.color = Color.green;
-		connectionInfo.text = "Connected.\nWaiting start game...";
-
-	}
-
-	void OnPlayerConnected (NetworkPlayer player)
-	{
-		UpdateConnection(true);
-	}
-
-	void OnFailedToConnect (NetworkConnectionError error)
-	{
-		connectionInfo.color = Color.red;
-		connectionInfo.text = "Failed!\n" + error.ToString (); 
-	}
-
-	void OnPlayerDisconnected(NetworkPlayer player) {
-		// GUI
-		UpdateConnection(false);
-		// Network
-		Network.RemoveRPCs(player);
-		Network.DestroyPlayerObjects(player);
-	}
-
-	void OnDisconnectedFromServer(NetworkDisconnection info) {
-		if (!Network.isServer) {
-			if (info == NetworkDisconnection.LostConnection) {
-				connectionInfo.color = Color.red;
-				connectionInfo.text = "Failed!\n" + 
-					"Lost connection to the server";
-			}
-		} else {
-			// Update GUI
-			Btn_startServer.gameObject.SetActive(true);
-			Btn_shutdownServer.gameObject.SetActive(false);
-			Btn_startGame.gameObject.SetActive(false);
-
-			UpdateConnection(false);
-		}
-
-	}
-
-	void OnServerInitialized() {
-		MasterServer.RegisterHost(gameTypeName, 
-		                          serverName.text != "" ? serverName.text : "Undefined", 
-		                          serverDescription.text);
-
-		// Update GUI
-		Btn_startServer.gameObject.SetActive(false);
-		Btn_shutdownServer.gameObject.SetActive(true);
-
-		UpdateConnection(false);
-	}
-	
-	//Master server
-	void OnMasterServerEvent(MasterServerEvent msEvent) {
-		switch (msEvent) {
-		case MasterServerEvent.RegistrationSucceeded:
-			Debug.Log ("Server success registered!");
-			break;
-		case MasterServerEvent.HostListReceived:
-			UpdateServerBrowser();
-			break;
-
-		}
-	}
-	
-	void OnFailedToConnectToMasterServer(NetworkConnectionError info) {
-		Debug.Log("Couldn't connect to master server! " + info);
-	}
-
-	/// <summary>
-	/// Updates the connection text if player 2 was connected.
-	/// </summary>
-	/// <param name="isConnected">If set to <c>true</c> is connected.</param>
-	private void UpdateConnection(bool isConnected) {
-		if (isConnected) {
-			Btn_startGame.gameObject.SetActive(true);
-			connection.color = Color.green;
-			connection.text = "Second player connected. \n You can start game!";
-		} else {
-			Btn_startGame.gameObject.SetActive(false);
-			connection.color = Color.red;
-			connection.text = "No player connected.";
-		}
-	}
-	
-	#endregion
-	
-	void Start()
-	{
-		#region Setup Master Server
-		//--- Master Sever
-		MasterServer.ipAddress = masterServerIp;
-		MasterServer.port = masterServerPort;
-		//---
-		//--- Facilitator
-		Network.natFacilitatorPort = facilitatorPort;
-		//---
-		#endregion
-
-		//--- GUI
-		Btn_startServer.gameObject.SetActive(true);
-		Btn_shutdownServer.gameObject.SetActive(false);
-		Btn_startGame.gameObject.SetActive(false);
-
-		serverIP.text = "IP: " + Network.player.ipAddress;
-		//---
-	}
-
-
-	public void StartServer(Text password)
-	{
-		int port = 0;;
-		if (int.TryParse (serverPort.text, out port)) {
-			// Start server
-			Network.incomingPassword = password.text;
-			Network.InitializeSecurity();
-			Network.InitializeServer (maxConnections, port, true);
-		} else {
-			Debug.Log("Wrong Port! It must be integer");
-		}
-
-	}
-
-	public void ShutdownServer()
-	{
-		// disconnect
-		Network.Disconnect ();
-	}
-
-	public void ConnectToServerFromTCP(Text password)
-	{
-		if (int.TryParse (connectPort.text, out port)) {
-			ip = connectIP.text;
-			ConnectToServer(password);
-		} else {
-			Debug.Log("Incorrect parsing! Port must be numerical!");
-		}
-	}
-
-	public void ConnectToServer(Text password)
-	{
-		Network.Connect (ip, port, password.text);
-		infoPanel.SetActive(true);
-	}
-
-	public void DisconnectFromServer(GameObject infoPanel)
-	{
-		Network.Disconnect();	
-		infoPanel.SetActive(false);
-	}
-
-	public void StartGame(int level = 1)
-	{
-		GetComponent<NetworkView> ().RPC ("LoadLevel", RPCMode.All, level);
-	}
-
-	[RPC]
-	private void LoadLevel(int level)
-	{
-		Application.LoadLevel (level);
-	}
-
-	public void UpdateHostList()
-	{
-		// Update after Master Server Event HostListReceived
-		// This event call UpdateServerBrowser ()
-		MasterServer.RequestHostList (gameTypeName);
-	}
+    //---Photon Settings
+    private const int maxPlayers = 2;
+    const string VERSION = "v0.0.1";
+    //---
 
 
 
-	// Call after Master Server Event HostListReceived
-	void UpdateServerBrowser() 
-	{
-		HostData [] hostData = MasterServer.PollHostList ();
+    #region Network messages
+ 
+    void OnConnectedToMaster()
+    {
+        Debug.Log("OnConnectedToMaster");
 
-		foreach (Transform child in grid.transform) {
-			Destroy(child.gameObject);
-		}
+    }
 
-		for (int i=0; i< hostData.Length; i++ ) {
+    void OnPhotonPlayerConnected(PhotonPlayer newPlayer)
+    {
+        
+        Debug.Log("OnPhotonPlayerConnected");
+        StartGame();
 
-			if(hostData[i].connectedPlayers > 1)
-				return;
+    }
+    
+    void OnFailedToConnectToPhoton(DisconnectCause cause)
+    {
+        Debug.Log("OnFailedToConnectToPhoton");
 
-			GameObject newRow = Instantiate(row) as GameObject;
+        GUIWithoutConnection(cause.ToString());
+    }
 
-			string ip_ = hostData[i].ip[0];
-			int port_ = hostData[i].port;
-			bool isProtected = hostData[i].passwordProtected;
+    void OnLeftRoom()
+    {
+        Debug.Log("OnLeftRoom");
+    }
 
-			Text [] texts = newRow.GetComponentsInChildren<Text>();
-			texts[0].text = hostData[i].gameName;
-			texts[1].text = ip_ + ":" + port_.ToString();
-			texts[2].text = hostData[i].comment;
-			texts[3].text = isProtected ? "Yes" : "No";
+    
+    void OnPhotonPlayerDisconnected(PhotonPlayer otherPlayer)
+    {
+        Debug.Log("OnPhotonPlayerDisconnected");
+
+        PhotonNetwork.LoadLevel(0);
+
+    }
+
+    void OnDisconnectedFromPhoton()
+    {
+        Debug.Log("OnDisconnectedFromPhoton");
+    }
+
+    void OnConnectedToPhoton()
+    {
+        Debug.Log("OnConnectedToPhoton");
+
+    }
+
+    void OnJoinedRoom()
+    {
+        Debug.Log("Joined to room");
+    }
 
 
+    void OnConnectionFail(DisconnectCause cause)
+    {
+        GUIWithoutConnection(cause.ToString());
+    }
+
+    void GUIWithoutConnection(string cause)
+    {
+        infoPanel.OpenInfoPanel(cause, Color.red);
+        Btn_CreateRoom.enabled = false;
+        Btn_JoinRandom.enabled = false;
+        Btn_JoinRoom.enabled = false;
+    }
+
+    #endregion
+    void Awake()
+    {
+        // this makes sure we can use PhotonNetwork.LoadLevel()
+        // on the master client and all clients in the same room sync their level automatically
+        PhotonNetwork.automaticallySyncScene = true;
+
+        // the following line checks if this client
+        // was just created (and not yet online). if so, we connect
+        if (PhotonNetwork.connectionStateDetailed == PeerState.PeerCreated)
+        {
+            // Connect to the photon master-server. We use the settings saved 
+            // in PhotonServerSettings (a .asset file in this project)
+            PhotonNetwork.ConnectUsingSettings(VERSION);
+        }
+
+        // generate a name for this player, if none is assigned yet
+        if (String.IsNullOrEmpty(PhotonNetwork.playerName))
+        {
+            PlayerName.text = PhotonNetwork.playerName = "Guest" + UnityEngine.Random.Range(1, 9999);
+        }
+
+    }
 
 
-			newRow.GetComponent<Button>().onClick
-				.AddListener(() => ConnectToServerFromBrowser(ip_, port_, isProtected));
+    public void CreateRoom()
+    {
+        if(PhotonNetwork.connectedAndReady)
+        {
+            PhotonNetwork.CreateRoom(
+                RoomName.text == "" ? "New Room" + UnityEngine.Random.Range(1, 9999) : RoomName.text,
+                new RoomOptions() { maxPlayers = maxPlayers, isVisible = IsVisible.isOn },
+                null);
 
-			newRow.transform.SetParent (grid.transform);
+            PhotonNetwork.playerName = PlayerName.text;
+            // Save name
+            PlayerPrefs.SetString("playerName", PhotonNetwork.playerName);
+            
+            infoPanel.OpenInfoPanel("Connected.\nWaiting player 2...", Color.green);
+        }
+        else
+        {
+            Debug.Log("You aren't ready to create room");
+        }
 
-			RectTransform rectTransform = (RectTransform)newRow.transform;
-			rectTransform.anchoredPosition3D = new Vector3(0,0,0);
-			rectTransform.localScale = new Vector3(1,1,1);
-		}
+    }
 
-	}
+    public void JoinRoom()
+    {
+        PhotonNetwork.JoinRoom(RoomName.text);
+    }
 
-	void ConnectToServerFromBrowser(string ip_,int port_, bool isProtected) {
-		if (!isProtected) {
-			Network.Connect (ip_, port_, "");
-			infoPanel.SetActive(true);
-		}
-		else {
-			passwordFrame.SetActive(true);
-			this.ip= ip_;
-			this.port = port_;
-		}
-			
+    public void JoinRandomRoom()
+    {
+        PhotonNetwork.JoinRandomRoom();
+    }
 
-	}
-	
+    public void StartGame()
+    {
+        PhotonNetwork.LoadLevel(levelNum);
+    }
+
+    // Call after Master Server Event HostListReceived
+    public void UpdateServerBrowser()
+    {
+        Debug.Log(PhotonNetwork.GetRoomList().Length.ToString());
+
+        foreach (Transform child in GridDataBrowser.transform)
+        {
+            Destroy(child.gameObject);
+        }
+
+        foreach (RoomInfo roomInfo in PhotonNetwork.GetRoomList())
+        {
+
+            if (roomInfo.playerCount > 1 || !roomInfo.open)
+                return;
+
+            GameObject newRowPrefab = Instantiate(RowPrefab) as GameObject;
+
+            string name_ = roomInfo.name;
+
+
+            Text[] texts = newRowPrefab.GetComponentsInChildren<Text>();
+            texts[0].text = roomInfo.name;
+            texts[1].text = roomInfo.playerCount.ToString();
+            texts[2].text = roomInfo.maxPlayers.ToString();
+            texts[3].text = roomInfo.open ? "No" : "Yes";
+
+            newRowPrefab.GetComponent<Button>().onClick
+                .AddListener(() => { 
+                    PhotonNetwork.JoinRoom(roomInfo.name); });
+
+            newRowPrefab.transform.SetParent(GridDataBrowser.transform);
+
+            RectTransform rectTransform = (RectTransform)newRowPrefab.transform;
+            rectTransform.anchoredPosition3D = new Vector3(0, 0, 0);
+            rectTransform.localScale = new Vector3(1, 1, 1);
+        }
+
+    }
+
 }

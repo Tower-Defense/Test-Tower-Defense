@@ -120,7 +120,7 @@ GameObject:
   - 54: {fileID: 5400000}
   - 65: {fileID: 6500000}
   - 114: {fileID: 11422572}
-  - 114: {fileID: 11478390}
+  - 114: {fileID: 11482108}
   m_Layer: 8
   m_Name: AttackJet_Prefab
   m_TagString: Air Enemy
@@ -861,7 +861,7 @@ MonoBehaviour:
   health: 100
   compass: {fileID: 491656}
   heightRange: {x: 10, y: 18}
---- !u!114 &11478390
+--- !u!114 &11482108
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -876,12 +876,12 @@ MonoBehaviour:
   group: 0
   prefixBackup: -1
   observed: {fileID: 0}
-  synchronization: 3
+  synchronization: 0
   onSerializeTransformOption: 3
   onSerializeRigidBodyOption: 2
   ownershipTransfer: 0
   ObservedComponents:
-  - {fileID: 400014}
+  - {fileID: 0}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 0
   instantiationId: -1

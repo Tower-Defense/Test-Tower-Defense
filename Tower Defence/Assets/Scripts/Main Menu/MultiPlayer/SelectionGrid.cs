@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class SelectionGrid : MonoBehaviour {
-	private CanvasGroup _currentPanel;
+	private GameObject _currentPanel;
 	private Button _currentBtn;
 	
 
@@ -17,9 +17,7 @@ public class SelectionGrid : MonoBehaviour {
 		}
 		if (_currentPanel != null ) {
 
-			_currentPanel.alpha = 0;
-			_currentPanel.interactable = false;
-			_currentPanel.blocksRaycasts = false;
+            _currentPanel.SetActive(false);
 		}
 		_currentBtn = button;
 		_currentPanel = button.GetComponent<SelectionButton> ().panel;
@@ -27,10 +25,8 @@ public class SelectionGrid : MonoBehaviour {
 			_currentBtn.enabled =false;
 		} 
 		if (_currentPanel != null ) {
-			
-			_currentPanel.alpha = 1;
-			_currentPanel.interactable = true;
-			_currentPanel.blocksRaycasts = true;
+
+            _currentPanel.SetActive(true);
 		}
 	}
 

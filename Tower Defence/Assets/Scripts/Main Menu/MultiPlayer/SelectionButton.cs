@@ -2,5 +2,5 @@
 using System.Collections;
 
 public class SelectionButton : MonoBehaviour {
-	public CanvasGroup panel;
+	public GameObject panel;
 }
