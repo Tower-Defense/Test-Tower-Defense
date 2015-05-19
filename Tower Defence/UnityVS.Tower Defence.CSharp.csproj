@@ -7,16 +7,14 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{4D58CAB7-60A7-1C9B-7733-0F7707FDBC70}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <AssemblyName>Assembly-CSharp</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.0.2p1</UnityVersion>
@@ -53,9 +51,6 @@
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
@@ -390,7 +385,6 @@
     <Compile Include="Assets\Scripts\Main Menu\MenuManager.cs" />
     <Compile Include="Assets\Scripts\Main Menu\MultiPlayer\InfoPanel.cs" />
     <Compile Include="Assets\Scripts\Main Menu\MultiPlayer\MultiPlayer.cs" />
-    <Compile Include="Assets\Scripts\Main Menu\MultiPlayer\MultiPlayer_old.cs" />
     <Compile Include="Assets\Scripts\Main Menu\MultiPlayer\SelectionButton.cs" />
     <Compile Include="Assets\Scripts\Main Menu\MultiPlayer\SelectionGrid.cs" />
     <Compile Include="Assets\Scripts\Network\NetworkManager.cs" />
@@ -402,7 +396,6 @@
     <Compile Include="Assets\Scripts\Turret\Turret_Base.cs" />
     <Compile Include="Assets\Scripts\Turret\Turret_Cannon.cs" />
     <Compile Include="Assets\Scripts\Turret\Turret_Sam.cs" />
-    <Compile Include="Assets\Test Master Server\Scripts\MainMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh2.shader" />

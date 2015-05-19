@@ -99,7 +99,7 @@ public class MultiPlayer : Photon.MonoBehaviour
     }
 
     #endregion
-    void Awake()
+    public void ConnectToNetwork()
     {
         // this makes sure we can use PhotonNetwork.LoadLevel()
         // on the master client and all clients in the same room sync their level automatically
@@ -120,6 +120,11 @@ public class MultiPlayer : Photon.MonoBehaviour
             PlayerName.text = PhotonNetwork.playerName = "Guest" + UnityEngine.Random.Range(1, 9999);
         }
 
+    }
+
+    public void DisconnectFromNetwork()
+    {
+        PhotonNetwork.Disconnect();
     }
 
 
@@ -185,7 +190,7 @@ public class MultiPlayer : Photon.MonoBehaviour
             texts[0].text = roomInfo.name;
             texts[1].text = roomInfo.playerCount.ToString();
             texts[2].text = roomInfo.maxPlayers.ToString();
-            texts[3].text = roomInfo.open ? "No" : "Yes";
+            texts[3].text = roomInfo.open ? "Yes" : "No";
 
             newRowPrefab.GetComponent<Button>().onClick
                 .AddListener(() => { 

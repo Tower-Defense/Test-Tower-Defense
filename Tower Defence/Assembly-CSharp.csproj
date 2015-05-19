@@ -357,7 +357,6 @@
      <Compile Include="Assets\Scripts\Main Menu\MenuManager.cs" />
      <Compile Include="Assets\Scripts\Main Menu\MultiPlayer\InfoPanel.cs" />
      <Compile Include="Assets\Scripts\Main Menu\MultiPlayer\MultiPlayer.cs" />
-     <Compile Include="Assets\Scripts\Main Menu\MultiPlayer\MultiPlayer_old.cs" />
      <Compile Include="Assets\Scripts\Main Menu\MultiPlayer\SelectionButton.cs" />
      <Compile Include="Assets\Scripts\Main Menu\MultiPlayer\SelectionGrid.cs" />
      <Compile Include="Assets\Scripts\Network\NetworkManager.cs" />
@@ -369,7 +368,6 @@
      <Compile Include="Assets\Scripts\Turret\Turret_Base.cs" />
      <Compile Include="Assets\Scripts\Turret\Turret_Cannon.cs" />
      <Compile Include="Assets\Scripts\Turret\Turret_Sam.cs" />
-     <Compile Include="Assets\Test Master Server\Scripts\MainMenu.cs" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Depth Cutout.shader" />
      <None Include="Assets\Plugins\Photon3Unity3D.xml" />
      <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh2.shader" />
