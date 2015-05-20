@@ -6,7 +6,7 @@ using System.Collections;
 /// </summary>
 public class Enemy_Base : MonoBehaviour {
 
-	public LevelMaster levelMaster;
+    private LevelMaster levelMaster;
 
 	public ParticleEmitter smokeTrail;
 	public GameObject explosionEffect;
@@ -21,7 +21,7 @@ public class Enemy_Base : MonoBehaviour {
 	//When script initial
 	void Awake() {
 		//connect to levelmaster
-		levelMaster = GameObject.FindWithTag ("LevelMaster").GetComponent <LevelMaster>();
+		levelMaster = LevelMaster.Instance;
 
 		//set health and speed
 		maxHealth = health;

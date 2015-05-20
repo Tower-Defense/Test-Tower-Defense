@@ -3,11 +3,11 @@ using System.Collections;
 
 public class PlayerBase : MonoBehaviour {
 
-	public LevelMaster levelMaster;
+	private LevelMaster levelMaster;
 	// Use this for initialization
 	void Start () {
 		//connect to levelmaster
-		levelMaster = GameObject.FindWithTag ("LevelMaster").GetComponent <LevelMaster>();
+        levelMaster = LevelMaster.Instance;
 	}
 
 	void OnTriggerEnter(Collider other) {

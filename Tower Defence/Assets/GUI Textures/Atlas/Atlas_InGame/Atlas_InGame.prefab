@@ -44,13 +44,13 @@ MonoBehaviour:
   - name: btn_Cannon
     outer:
       serializedVersion: 2
-      x: 256
+      x: 362
       y: 176
       width: 80
       height: 80
     inner:
       serializedVersion: 2
-      x: 256
+      x: 362
       y: 176
       width: 80
       height: 80
@@ -62,14 +62,14 @@ MonoBehaviour:
   - name: slicedsprite_glowbox
     outer:
       serializedVersion: 2
-      x: 337
-      y: 176
+      x: 256
+      y: 95
       width: 80
       height: 80
     inner:
       serializedVersion: 2
-      x: 337
-      y: 176
+      x: 256
+      y: 95
       width: 80
       height: 80
     rotated: 0
@@ -80,14 +80,14 @@ MonoBehaviour:
   - name: btn_Missile
     outer:
       serializedVersion: 2
-      x: 418
-      y: 176
+      x: 256
+      y: 14
       width: 80
       height: 80
     inner:
       serializedVersion: 2
-      x: 418
-      y: 176
+      x: 256
+      y: 14
       width: 80
       height: 80
     rotated: 0
@@ -98,13 +98,13 @@ MonoBehaviour:
   - name: btn_Mine
     outer:
       serializedVersion: 2
-      x: 256
+      x: 337
       y: 95
       width: 80
       height: 80
     inner:
       serializedVersion: 2
-      x: 256
+      x: 337
       y: 95
       width: 80
       height: 80
@@ -116,13 +116,13 @@ MonoBehaviour:
   - name: btn_Arrow
     outer:
       serializedVersion: 2
-      x: 256
+      x: 413
       y: 19
       width: 25
       height: 75
     inner:
       serializedVersion: 2
-      x: 256
+      x: 413
       y: 19
       width: 25
       height: 75
@@ -167,6 +167,96 @@ MonoBehaviour:
     paddingRight: .00392156886
     paddingTop: 0
     paddingBottom: .641025662
+  - name: btn_settings
+    outer:
+      serializedVersion: 2
+      x: 443
+      y: 194
+      width: 63
+      height: 62
+    inner:
+      serializedVersion: 2
+      x: 443
+      y: 194
+      width: 63
+      height: 62
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: .0158730168
+    paddingTop: .0161290318
+    paddingBottom: .0161290318
+  - name: pause
+    outer:
+      serializedVersion: 2
+      x: 337
+      y: 20
+      width: 75
+      height: 74
+    inner:
+      serializedVersion: 2
+      x: 337
+      y: 20
+      width: 75
+      height: 74
+    rotated: 0
+    paddingLeft: .346666664
+    paddingRight: .360000014
+    paddingTop: .364864856
+    paddingBottom: .364864856
+  - name: play
+    outer:
+      serializedVersion: 2
+      x: 418
+      y: 99
+      width: 77
+      height: 76
+    inner:
+      serializedVersion: 2
+      x: 418
+      y: 99
+      width: 77
+      height: 76
+    rotated: 0
+    paddingLeft: .337662339
+    paddingRight: .324675322
+    paddingTop: .342105269
+    paddingBottom: .342105269
+  - name: tick
+    outer:
+      serializedVersion: 2
+      x: 256
+      y: 176
+      width: 105
+      height: 80
+    inner:
+      serializedVersion: 2
+      x: 256
+      y: 176
+      width: 105
+      height: 80
+    rotated: 0
+    paddingLeft: .123809524
+    paddingRight: .095238097
+    paddingTop: .300000012
+    paddingBottom: .300000012
+  - name: cross
+    outer:
+      serializedVersion: 2
+      x: 439
+      y: 62
+      width: 32
+      height: 32
+    inner:
+      serializedVersion: 2
+      x: 439
+      y: 62
+      width: 32
+      height: 32
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
   mCoordinates: 0
   mPixelSize: 1
   mReplacement: {fileID: 0}

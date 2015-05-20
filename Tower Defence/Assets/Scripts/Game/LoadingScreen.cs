@@ -7,6 +7,7 @@ public class LoadingScreen : MonoBehaviour {
 	public Texture2D[] texture;
 
 	IEnumerator Start() {
+        level = PlayerPrefs.GetInt("LoadLevel", 1);
 		AsyncOperation async = Application.LoadLevelAsync(level);
 		LoadingImage ();
 		yield return async;
