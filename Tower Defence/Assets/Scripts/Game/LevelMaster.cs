@@ -13,7 +13,6 @@ public class LevelMaster : MonoBehaviour
     public bool upgradePanelOpen = false;
     public bool settingsPanelOpen = false;
     public bool pause = false;
-    public AudioListener cameraListener;
 
     //Player variables
     public int livesCount = 10;
@@ -490,6 +489,9 @@ public class LevelMaster : MonoBehaviour
                 break;
             case "Btn_Missile":
                 structureIndex = 1;
+                break;
+            case "Btn_Mine":
+                structureIndex = 2;
                 break;
         }
 

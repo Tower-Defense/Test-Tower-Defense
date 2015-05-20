@@ -80,7 +80,7 @@ public class Turret_Sam : Turret_Base {
 		audio.Play ();
 		nextFireTime = Time.time + reloadTime;
 
-		int rand = Random.Range(0,6);
+        int rand = Random.Range(0, muzzlePositions.Length);
 		GameObject newMissile = Instantiate (myProjectile, muzzlePositions [rand].position, muzzlePositions [rand].rotation) as GameObject;
 		var projectile = newMissile.GetComponent<Projectile_Missile> ();
 		projectile.myTarget = myTarget;

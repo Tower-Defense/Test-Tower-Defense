@@ -72,6 +72,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &192190
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 413134}
+  - 65: {fileID: 6501908}
+  m_Layer: 12
+  m_Name: FireCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &196134
 GameObject:
   m_ObjectHideFlags: 1
@@ -89,6 +105,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &413134
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 192190}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 456672}
+  m_RootOrder: 3
 --- !u!4 &417290
 Transform:
   m_ObjectHideFlags: 1
@@ -120,12 +148,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 114492}
   m_LocalRotation: {x: -1.38777878e-17, y: .215616897, z: 2.57035335e-08, w: .9764781}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.64534068, y: -3.85887366e-18, z: 34.7576447}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 417290}
   - {fileID: 441482}
   - {fileID: 472144}
+  - {fileID: 413134}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &472144
@@ -306,6 +335,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 196134}
   m_Mesh: {fileID: 4300002, guid: 72326e8bb5b87ec48a58691fee0c8011, type: 3}
+--- !u!65 &6501908
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 192190}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: .800000012, z: 1}
+  m_Center: {x: 0, y: .400000006, z: 0}
 --- !u!65 &6549998
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -316,8 +357,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: .800000012, z: 1}
+  m_Center: {x: 0, y: .400000006, z: 0}
 --- !u!114 &11403492
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -329,7 +370,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 042851468b6713f4a873230a5a42be80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelMaster: {fileID: 0}
   smokeTrail: {fileID: 1597896}
   explosionEffect: {fileID: 100000, guid: c4adc3d0896b4634b8ad116aebefbf2c, type: 2}
   myCashValue: 50
@@ -437,7 +477,7 @@ CharacterController:
   m_StepOffset: .300000012
   m_SkinWidth: .0799999982
   m_MinMoveDistance: 0
-  m_Center: {x: 0, y: .50999999, z: 0}
+  m_Center: {x: 0, y: .5, z: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

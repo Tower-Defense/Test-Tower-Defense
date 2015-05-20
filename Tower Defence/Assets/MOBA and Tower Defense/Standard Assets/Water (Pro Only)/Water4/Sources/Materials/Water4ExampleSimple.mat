@@ -1,0 +1,191 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Water4ExampleSimple
+  m_Shader: {fileID: 4800000, guid: 8aaff0751054e4a9cb4642d01eaf5be9, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+      data:
+        first:
+          name: _MainTex
+        second:
+          m_Texture: {fileID: 2800000, guid: e6f8288974c664a309d6c66de636978c, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _BumpMap
+        second:
+          m_Texture: {fileID: 2800000, guid: fb6566c21f717904f83743a5a76dd0b0, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _ReflectionTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _RefractionTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _ShoreTex
+        second:
+          m_Texture: {fileID: 2800000, guid: 36dd0b22da8874ed38075789055ca664, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _WavesTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _DisplacementHeightMap
+        second:
+          m_Texture: {fileID: 2800000, guid: a782b26d6436b48d9882906b9f8ca31a, type: 2}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _SecondDisplacementHeightMap
+        second:
+          m_Texture: {fileID: 2800000, guid: 4facc21e08e3a43ed97c930f7dae6e7b, type: 2}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _ThirdDisplacementHeightMap
+        second:
+          m_Texture: {fileID: 2800000, guid: dc30b984e8e3c4cdfb38d5fceb411602, type: 2}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _CubeTex
+        second:
+          m_Texture: {fileID: 0}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+    m_Floats:
+      data:
+        first:
+          name: _Shininess
+        second: 349.137939
+      data:
+        first:
+          name: _FresnelScale
+        second: 4
+      data:
+        first:
+          name: _GerstnerIntensity
+        second: .469999999
+      data:
+        first:
+          name: _HeightDisplacement
+        second: 2.33703184
+      data:
+        first:
+          name: _NormalsDisplacement
+        second: 72.7272797
+    m_Colors:
+      data:
+        first:
+          name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _DistortParams
+        second: {r: 1.02857149, g: .201872215, b: .910000026, a: -.370000005}
+      data:
+        first:
+          name: _InvFadeParemeter
+        second: {r: 3, g: .0856210217, b: .0941423923, a: .140000001}
+      data:
+        first:
+          name: _AnimationTiling
+        second: {r: .400000006, g: .390999973, b: .560000002, a: .699999988}
+      data:
+        first:
+          name: _AnimationDirection
+        second: {r: 2, g: 1, b: -1, a: 1}
+      data:
+        first:
+          name: _BumpTiling
+        second: {r: .319999993, g: .319999993, b: .0799999982, a: .159999996}
+      data:
+        first:
+          name: _BumpDirection
+        second: {r: 1.75999999, g: 30, b: 20, a: -20}
+      data:
+        first:
+          name: _BaseColor
+        second: {r: 0, g: .168103367, b: .286764681, a: .505882382}
+      data:
+        first:
+          name: _ReflectionColor
+        second: {r: .213235319, g: .759008944, b: 1, a: .470588237}
+      data:
+        first:
+          name: _SpecularColor
+        second: {r: 1, g: .952488601, b: .845588207, a: 1}
+      data:
+        first:
+          name: _WorldLightDir
+        second: {r: -.60021615, g: -.173590794, b: -.780773878, a: 0}
+      data:
+        first:
+          name: _Foam
+        second: {r: .327586204, g: .7471264, b: 0, a: 0}
+      data:
+        first:
+          name: _GAmplitude
+        second: {r: .0299999993, g: .0199999996, b: .0250000004, a: .0250000004}
+      data:
+        first:
+          name: _GFrequency
+        second: {r: .5, g: .25, b: .600000024, a: .245000005}
+      data:
+        first:
+          name: _GSteepness
+        second: {r: 8.51000023, g: 7.82999992, b: 1, a: 1}
+      data:
+        first:
+          name: _GSpeed
+        second: {r: 4, g: 2, b: 1, a: 1}
+      data:
+        first:
+          name: _GDirectionAB
+        second: {r: .0850000009, g: .0299999993, b: .0250000004, a: .0250000004}
+      data:
+        first:
+          name: _GDirectionCD
+        second: {r: -.0299999993, g: -.0900000036, b: .0500000007, a: .0500000007}
+      data:
+        first:
+          name: _DepthColor
+        second: {r: .298117638, g: .366117179, b: .395522416, a: .345098048}
+      data:
+        first:
+          name: _RefractionFog
+        second: {r: .868177772, g: .879717588, b: .888059676, a: 1}
+--- !u!1002 &2100001
+EditorExtensionImpl:
+  serializedVersion: 6
