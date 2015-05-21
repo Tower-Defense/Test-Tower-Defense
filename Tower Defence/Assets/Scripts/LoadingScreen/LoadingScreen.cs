@@ -8,6 +8,11 @@ public class LoadingScreen : MonoBehaviour {
 
 	IEnumerator Start() {
         level = PlayerPrefs.GetInt("LoadLevel", 1);
+        if (level >= Application.levelCount)
+        {
+            level = 1;
+            PlayerPrefs.SetInt("LoadLevel", level);
+        }
 		AsyncOperation async = Application.LoadLevelAsync(level);
 		LoadingImage ();
 		yield return async;

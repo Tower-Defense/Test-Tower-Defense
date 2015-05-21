@@ -376,6 +376,7 @@
      <Compile Include="Assets\Scripts\Game\PlacementPlane.cs" />
      <Compile Include="Assets\Scripts\Game\Settings.cs" />
      <Compile Include="Assets\Scripts\LoadingScreen\LoadingScreen.cs" />
+     <Compile Include="Assets\Scripts\Main Menu\HighScores\HighScores.cs" />
      <Compile Include="Assets\Scripts\Main Menu\Menu.cs" />
      <Compile Include="Assets\Scripts\Main Menu\MenuManager.cs" />
      <Compile Include="Assets\Scripts\Main Menu\MultiPlayer\InfoPanel.cs" />
