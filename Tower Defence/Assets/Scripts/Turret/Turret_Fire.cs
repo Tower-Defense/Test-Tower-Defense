@@ -1,13 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Turret_Cannon : Turret_Barrel_Base
+public class Turret_Fire : Turret_Barrel_Base
 {
+
     public Transform turretBall;
 
     protected float nextMoveTime;
     protected Quaternion desiredRotation;
 
+    private bool isFire = false;
+    private FireRay fireRay;
+
+
+    void Start()
+    {
+        fireRay = myProjectile.GetComponent<FireRay>();
+     
+    }
 
     // Update is called once per frame
     void Update()
@@ -19,11 +29,38 @@ public class Turret_Cannon : Turret_Barrel_Base
                 CalculateAimPosition(myTarget.position);
                 turretBall.rotation = Quaternion.Lerp(turretBall.rotation, desiredRotation, Time.deltaTime * turnSpeed);
             }
+        }
 
-            if (Time.time >= nextFireTime)
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (myTarget != null)
+        {
+            nextFireTime = Time.time + (reloadTime * 0.5f);
+
+        }
+        else
+        {
+            if (TargetEnemyTags.Contains(other.gameObject.tag))
             {
-                FireProjectile();
+                myTarget = other.gameObject.transform;
+                fireRay.StartFire(myTarget);
+                if (audio != null)
+                    audio.Play();
             }
+        }
+    }
+
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.transform == myTarget)
+        {
+            myTarget = null;
+            fireRay.myTarget = null;
+            if (audio != null)
+                audio.Stop();
         }
 
     }
@@ -37,18 +74,10 @@ public class Turret_Cannon : Turret_Barrel_Base
     }
 
 
-
     protected override void FireProjectile()
     {
         base.FireProjectile();
-        nextMoveTime = Time.time + firePauseTime;
-        CalculateAimError();
 
-        foreach (var theMuzzlePos in muzzlePositions)
-        {
-            Instantiate(myProjectile, theMuzzlePos.position, theMuzzlePos.rotation);
-            if (muzzleEffect != null)
-                Instantiate(muzzleEffect, theMuzzlePos.position, theMuzzlePos.rotation);
-        }
+        CalculateAimError();
     }
 }

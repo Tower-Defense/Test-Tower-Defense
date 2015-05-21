@@ -483,11 +483,14 @@ MonoBehaviour:
   myUpgradeName: 
   myProjectile: {fileID: 162668, guid: 91a340f68f7eb664b9a00ec0180045bc, type: 2}
   reloadTime: .300000012
-  turnSpeed: 10
+  turnSpeed: 15
   firePauseTime: .200000003
-  muzzleEffect: {fileID: 0}
   errorAmount: .100000001
+  TargetEnemyTags:
+  - Ground Enemy
+  - Air Enemy
   myTarget: {fileID: 0}
+  muzzleEffect: {fileID: 0}
   muzzlePositions:
   - {fileID: 488732}
   - {fileID: 492648}

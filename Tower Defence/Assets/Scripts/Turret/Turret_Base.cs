@@ -6,7 +6,7 @@ using System.Collections;
 /// </summary>
 public class Turret_Base : MonoBehaviour {
 
-	public GameObject myUpgrade;
+	public GameObject myUpgrade = null;
 	public int myUpgradeCost = 0;
 	public string myUpgradeName = "";
 	

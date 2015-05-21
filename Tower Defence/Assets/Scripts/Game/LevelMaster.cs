@@ -147,6 +147,10 @@ public class LevelMaster : MonoBehaviour
     void Update()
     {
         //---GUI
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            ToggleSettingsPanel();
+        }
         if (buildPanelOpen)
         {
             var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -490,8 +494,11 @@ public class LevelMaster : MonoBehaviour
             case "Btn_Missile":
                 structureIndex = 1;
                 break;
-            case "Btn_Mine":
+            case "Btn_Laser":
                 structureIndex = 2;
+                break;
+            case "Btn_Fire":
+                structureIndex = 3;
                 break;
         }
 

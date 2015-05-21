@@ -12,11 +12,11 @@ public class AI_Pather : MonoBehaviour {
     Path path;
     int currentWaypoint;
 
-    float speed = 1;
+    float speed = 1f;
 
     CharacterController characterController;
 
-    float maxWaypointDistance = 2f;
+    float maxWaypointDistance = 3f;
 
 	void Start() {
 		seeker = GetComponent<Seeker>();
@@ -29,6 +29,7 @@ public class AI_Pather : MonoBehaviour {
         {
             path = p;
             currentWaypoint = 0;
+            Debug.Log(path.vectorPath.Count);
         }
         else
         {

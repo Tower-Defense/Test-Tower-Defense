@@ -402,11 +402,14 @@ MonoBehaviour:
   myUpgradeName: Mega Laser Gun
   myProjectile: {fileID: 162668, guid: 91a340f68f7eb664b9a00ec0180045bc, type: 2}
   reloadTime: .300000012
-  turnSpeed: 7
+  turnSpeed: 10
   firePauseTime: .200000003
-  muzzleEffect: {fileID: 0}
   errorAmount: .0500000007
+  TargetEnemyTags:
+  - Ground Enemy
+  - Air Enemy
   myTarget: {fileID: 0}
+  muzzleEffect: {fileID: 0}
   muzzlePositions:
   - {fileID: 458724}
   - {fileID: 435912}

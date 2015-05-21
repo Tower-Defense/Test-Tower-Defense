@@ -3,11 +3,10 @@ using System.Collections;
 
 public class Projectile_Laser : Projectile_Base
 {
-    // Update is called once per frame
     void Update()
     {
         // destroy
-        if (myDist >= myRange)
+        if (myDist >= myRange && !myExplosion.GetComponent<ParticleSystem>().IsAlive(true))
         {
             Destroy(gameObject);
         }

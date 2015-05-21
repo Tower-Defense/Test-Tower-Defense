@@ -5,27 +5,40 @@ public class FireRay : MonoBehaviour
 {
     public int myDamageAmount = 1;
     public Transform myTarget;
+    private ParticleSystem myParticleSystem;
+
+    void Start()
+    {
+        myParticleSystem = GetComponent<ParticleSystem>();
+    }
 
     void OnParticleCollision(GameObject collision)
 
     {
-    //    if (collision.gameObject.tag == "Air Enemy" || collision.gameObject.tag == "Ground Enemy")
-        {
-            collision.transform.parent.gameObject.SendMessage("TakeDamage", myDamageAmount, SendMessageOptions.DontRequireReceiver);
-    //        myTarget = collision.gameObject.transform;
-        }
 
+         collision
+             .transform
+             .parent
+             .gameObject
+             .SendMessage("TakeDamage", myDamageAmount, SendMessageOptions.DontRequireReceiver);
+
+
+    }
+    public void StartFire( Transform target_)
+    {
+        myTarget = target_;
+        myParticleSystem.Play(true);
     }
 
     void Update()
     {
-        if (myTarget)
+        if (myTarget != null)
         {
-            transform.LookAt(myTarget);
+      //      transform.LookAt(myTarget);
         }
         else
         {
-        //    Destroy(gameObject);
+            myParticleSystem.Stop(true);
         }
     }
 }

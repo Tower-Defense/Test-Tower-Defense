@@ -372,7 +372,8 @@ MonoBehaviour:
   onSerializeTransformOption: 3
   onSerializeRigidBodyOption: 2
   ownershipTransfer: 0
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 0}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 0
   instantiationId: -1
@@ -395,9 +396,11 @@ MonoBehaviour:
   reloadTime: .75
   turnSpeed: 5
   firePauseTime: .25
-  muzzleEffect: {fileID: 100000, guid: 2b52460900c06ae48ab7e34bbc1df5db, type: 2}
   errorAmount: .100000001
+  TargetEnemyTags:
+  - Air Enemy
   myTarget: {fileID: 0}
+  muzzleEffect: {fileID: 100000, guid: 2b52460900c06ae48ab7e34bbc1df5db, type: 2}
   muzzlePositions:
   - {fileID: 468984}
   pivot_Tilt: {fileID: 400000}

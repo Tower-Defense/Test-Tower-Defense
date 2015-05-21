@@ -139,7 +139,7 @@ public class MultiPlayer : Photon.MonoBehaviour
 
             PhotonNetwork.playerName = PlayerName.text;
             // Save name
-            PlayerPrefs.SetString("playerName", PhotonNetwork.playerName);
+            PlayerPrefs.SetString("PlayerName", PhotonNetwork.playerName);
             
             infoPanel.OpenInfoPanel("Connected.\nWaiting player 2...", Color.green);
         }
@@ -162,7 +162,8 @@ public class MultiPlayer : Photon.MonoBehaviour
 
     public void StartGame()
     {
-        PhotonNetwork.LoadLevel(levelNum);
+        PlayerPrefs.SetInt("LoadLevel", levelNum);
+        PhotonNetwork.LoadLevel("MainMenu");
     }
 
     // Call after Master Server Event HostListReceived

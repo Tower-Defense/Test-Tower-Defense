@@ -44,14 +44,14 @@ MonoBehaviour:
   - name: btn_Cannon
     outer:
       serializedVersion: 2
-      x: 362
-      y: 176
+      x: 0
+      y: 65
       width: 80
       height: 80
     inner:
       serializedVersion: 2
-      x: 362
-      y: 176
+      x: 0
+      y: 65
       width: 80
       height: 80
     rotated: 0
@@ -62,14 +62,14 @@ MonoBehaviour:
   - name: slicedsprite_glowbox
     outer:
       serializedVersion: 2
-      x: 256
-      y: 95
+      x: 129
+      y: 275
       width: 80
       height: 80
     inner:
       serializedVersion: 2
-      x: 256
-      y: 95
+      x: 129
+      y: 275
       width: 80
       height: 80
     rotated: 0
@@ -80,14 +80,14 @@ MonoBehaviour:
   - name: btn_Missile
     outer:
       serializedVersion: 2
-      x: 256
-      y: 14
+      x: 129
+      y: 194
       width: 80
       height: 80
     inner:
       serializedVersion: 2
-      x: 256
-      y: 14
+      x: 129
+      y: 194
       width: 80
       height: 80
     rotated: 0
@@ -98,14 +98,14 @@ MonoBehaviour:
   - name: btn_Mine
     outer:
       serializedVersion: 2
-      x: 337
-      y: 95
+      x: 129
+      y: 113
       width: 80
       height: 80
     inner:
       serializedVersion: 2
-      x: 337
-      y: 95
+      x: 129
+      y: 113
       width: 80
       height: 80
     rotated: 0
@@ -116,14 +116,14 @@ MonoBehaviour:
   - name: btn_Arrow
     outer:
       serializedVersion: 2
-      x: 413
-      y: 19
+      x: 81
+      y: 70
       width: 25
       height: 75
     inner:
       serializedVersion: 2
-      x: 413
-      y: 19
+      x: 81
+      y: 70
       width: 25
       height: 75
     rotated: 0
@@ -134,14 +134,14 @@ MonoBehaviour:
   - name: Xscale_32
     outer:
       serializedVersion: 2
-      x: 0
-      y: 2
+      x: 256
+      y: 415
       width: 255
       height: 97
     inner:
       serializedVersion: 2
-      x: 0
-      y: 2
+      x: 256
+      y: 415
       width: 255
       height: 97
     rotated: 0
@@ -153,13 +153,13 @@ MonoBehaviour:
     outer:
       serializedVersion: 2
       x: 0
-      y: 100
+      y: 356
       width: 255
       height: 156
     inner:
       serializedVersion: 2
       x: 0
-      y: 100
+      y: 356
       width: 255
       height: 156
     rotated: 0
@@ -170,14 +170,14 @@ MonoBehaviour:
   - name: btn_settings
     outer:
       serializedVersion: 2
-      x: 443
-      y: 194
+      x: 0
+      y: 2
       width: 63
       height: 62
     inner:
       serializedVersion: 2
-      x: 443
-      y: 194
+      x: 0
+      y: 2
       width: 63
       height: 62
     rotated: 0
@@ -188,14 +188,14 @@ MonoBehaviour:
   - name: pause
     outer:
       serializedVersion: 2
-      x: 337
-      y: 20
+      x: 210
+      y: 281
       width: 75
       height: 74
     inner:
       serializedVersion: 2
-      x: 337
-      y: 20
+      x: 210
+      y: 281
       width: 75
       height: 74
     rotated: 0
@@ -206,14 +206,14 @@ MonoBehaviour:
   - name: play
     outer:
       serializedVersion: 2
-      x: 418
-      y: 99
+      x: 129
+      y: 36
       width: 77
       height: 76
     inner:
       serializedVersion: 2
-      x: 418
-      y: 99
+      x: 129
+      y: 36
       width: 77
       height: 76
     rotated: 0
@@ -224,14 +224,14 @@ MonoBehaviour:
   - name: tick
     outer:
       serializedVersion: 2
-      x: 256
-      y: 176
+      x: 0
+      y: 146
       width: 105
       height: 80
     inner:
       serializedVersion: 2
-      x: 256
-      y: 176
+      x: 0
+      y: 146
       width: 105
       height: 80
     rotated: 0
@@ -242,16 +242,34 @@ MonoBehaviour:
   - name: cross
     outer:
       serializedVersion: 2
-      x: 439
-      y: 62
+      x: 256
+      y: 382
       width: 32
       height: 32
     inner:
       serializedVersion: 2
-      x: 439
-      y: 62
+      x: 256
+      y: 382
       width: 32
       height: 32
+    rotated: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: btn_fire
+    outer:
+      serializedVersion: 2
+      x: 0
+      y: 227
+      width: 128
+      height: 128
+    inner:
+      serializedVersion: 2
+      x: 0
+      y: 227
+      width: 128
+      height: 128
     rotated: 0
     paddingLeft: 0
     paddingRight: 0

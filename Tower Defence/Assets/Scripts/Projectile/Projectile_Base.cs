@@ -42,8 +42,5 @@ public class Projectile_Base : MonoBehaviour
         // move
         transform.Translate(Vector3.forward * distPerUpdate);
         myDist += distPerUpdate;
-
-
-
     }
 }

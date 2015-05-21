@@ -540,9 +540,11 @@ MonoBehaviour:
   reloadTime: .25
   turnSpeed: 15
   firePauseTime: .125
-  muzzleEffect: {fileID: 100000, guid: 2b52460900c06ae48ab7e34bbc1df5db, type: 2}
   errorAmount: .00100000005
+  TargetEnemyTags:
+  - Air Enemy
   myTarget: {fileID: 0}
+  muzzleEffect: {fileID: 100000, guid: 2b52460900c06ae48ab7e34bbc1df5db, type: 2}
   muzzlePositions:
   - {fileID: 464742}
   - {fileID: 408276}
