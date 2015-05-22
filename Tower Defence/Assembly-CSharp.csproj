@@ -371,8 +371,8 @@
      <Compile Include="Assets\Scripts\Enemies\Attack_Jet.cs" />
      <Compile Include="Assets\Scripts\Enemies\Enemy_Base.cs" />
      <Compile Include="Assets\Scripts\Enemies\Enemy_GroundUnit.cs" />
+     <Compile Include="Assets\Scripts\Game\GameObjectsSoundController.cs" />
      <Compile Include="Assets\Scripts\Game\LevelMaster.cs" />
-     <Compile Include="Assets\Scripts\Game\Pause.cs" />
      <Compile Include="Assets\Scripts\Game\PlacementPlane.cs" />
      <Compile Include="Assets\Scripts\Game\Settings.cs" />
      <Compile Include="Assets\Scripts\LoadingScreen\LoadingScreen.cs" />
@@ -393,6 +393,7 @@
      <Compile Include="Assets\Scripts\Projectile\Projectile_Cannon.cs" />
      <Compile Include="Assets\Scripts\Projectile\Projectile_Laser.cs" />
      <Compile Include="Assets\Scripts\Projectile\Projectile_Missile.cs" />
+     <Compile Include="Assets\Scripts\Static\GameController.cs" />
      <Compile Include="Assets\Scripts\Turret\Turret_Barrel_Base.cs" />
      <Compile Include="Assets\Scripts\Turret\Turret_Base.cs" />
      <Compile Include="Assets\Scripts\Turret\Turret_Cannon.cs" />

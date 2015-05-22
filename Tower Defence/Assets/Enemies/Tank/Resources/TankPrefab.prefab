@@ -33,6 +33,7 @@ GameObject:
   - 114: {fileID: 11440342}
   - 114: {fileID: 11459288}
   - 114: {fileID: 11428982}
+  - 114: {fileID: 11410196}
   m_Layer: 0
   m_Name: TankPrefab
   m_TagString: Ground Enemy
@@ -383,6 +384,17 @@ MonoBehaviour:
   seeker: {fileID: 11415084}
   controller: {fileID: 14326764}
   nextWaypointDistance: 1
+--- !u!114 &11410196
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 114492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5087c308dfce3834d92d00a6d2d5dede, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11415084
 MonoBehaviour:
   m_ObjectHideFlags: 1

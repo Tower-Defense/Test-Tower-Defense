@@ -64,6 +64,7 @@ GameObject:
   - 114: {fileID: 11462962}
   - 114: {fileID: 11496856}
   - 82: {fileID: 8217202}
+  - 114: {fileID: 11462070}
   m_Layer: 0
   m_Name: Tow_1Fire
   m_TagString: Untagged
@@ -494,6 +495,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   multiplier: 1
+--- !u!114 &11462070
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5087c308dfce3834d92d00a6d2d5dede, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11462962
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -543,9 +555,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08e6b00e4434b5d4b9e503e19b8c3bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myUpgrade: {fileID: 100006, guid: fd15b8db030ce5543bd8137839360e9c, type: 2}
-  myUpgradeCost: 100
-  myUpgradeName: Super Fire Gun
+  myUpgrade: {fileID: 11488876, guid: fd15b8db030ce5543bd8137839360e9c, type: 2}
+  myCost: 65
+  mySellMultiplier: .5
+  myName: Fire
   myProjectile: {fileID: 125730}
   reloadTime: 1
   turnSpeed: 10

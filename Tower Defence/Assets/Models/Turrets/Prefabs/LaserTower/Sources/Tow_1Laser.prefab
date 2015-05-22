@@ -64,6 +64,7 @@ GameObject:
   - 82: {fileID: 8202094}
   - 114: {fileID: 11430756}
   - 114: {fileID: 11453228}
+  - 114: {fileID: 11409768}
   m_Layer: 0
   m_Name: Tow_1Laser
   m_TagString: Untagged
@@ -358,6 +359,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11409768
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5087c308dfce3834d92d00a6d2d5dede, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11430756
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -394,9 +406,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a94344a49afe064cab6282eacd6802e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myUpgrade: {fileID: 100006, guid: 72eb35f4963c20245bea471b983d7cc1, type: 2}
-  myUpgradeCost: 70
-  myUpgradeName: Super Laser Gun
+  myUpgrade: {fileID: 11442426, guid: 72eb35f4963c20245bea471b983d7cc1, type: 2}
+  myCost: 70
+  mySellMultiplier: .5
+  myName: Laser
   myProjectile: {fileID: 162668, guid: 91a340f68f7eb664b9a00ec0180045bc, type: 2}
   reloadTime: .5
   turnSpeed: 8

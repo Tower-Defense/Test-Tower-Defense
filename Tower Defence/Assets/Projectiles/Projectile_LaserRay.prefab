@@ -13,6 +13,7 @@ GameObject:
   - 23: {fileID: 2306984}
   - 108: {fileID: 10816342}
   - 114: {fileID: 11429594}
+  - 114: {fileID: 11429112}
   m_Layer: 0
   m_Name: Projectile_LaserRay
   m_TagString: Untagged
@@ -107,6 +108,17 @@ Light:
   m_ShadowRadius: 0
   m_ShadowAngle: 0
   m_AreaSize: {x: 1, y: 1}
+--- !u!114 &11429112
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 162668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5087c308dfce3834d92d00a6d2d5dede, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11429594
 MonoBehaviour:
   m_ObjectHideFlags: 1

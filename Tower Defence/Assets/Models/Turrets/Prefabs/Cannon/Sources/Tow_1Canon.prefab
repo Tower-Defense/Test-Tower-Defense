@@ -47,6 +47,7 @@ GameObject:
   - 114: {fileID: 11423574}
   - 135: {fileID: 13512030}
   - 114: {fileID: 11486178}
+  - 114: {fileID: 11453296}
   m_Layer: 0
   m_Name: Tow_1Canon
   m_TagString: Untagged
@@ -336,9 +337,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a94344a49afe064cab6282eacd6802e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myUpgrade: {fileID: 100004, guid: eedba33ac5d144d4d8767e71099044cc, type: 2}
-  myUpgradeCost: 50
-  myUpgradeName: Super Cannon
+  myUpgrade: {fileID: 11462008, guid: eedba33ac5d144d4d8767e71099044cc, type: 2}
+  myCost: 60
+  mySellMultiplier: .5
+  myName: Cannon
   myProjectile: {fileID: 127316, guid: 47857e0a54b8fb3438f2d6200a9cd32d, type: 2}
   reloadTime: 1
   turnSpeed: 8
@@ -352,6 +354,17 @@ MonoBehaviour:
   - {fileID: 462160}
   - {fileID: 427768}
   turretBall: {fileID: 400000}
+--- !u!114 &11453296
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5087c308dfce3834d92d00a6d2d5dede, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11486178
 MonoBehaviour:
   m_ObjectHideFlags: 1

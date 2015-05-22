@@ -39,16 +39,13 @@ public class Turret_Barrel_Base : Turret_Base
         CalculateAimError();
         nextFireTime = 0.0f;
         audio = GetComponent<AudioSource>();
+
     }
 
-    void OnTriggerEnter(Collider other)
+
+    void OnTriggerStay(Collider other)
     {
-        if (myTarget != null)
-        {
-            nextFireTime = Time.time + (reloadTime * 0.5f);
-            
-        }
-        else
+        if (myTarget == null)
         {
             if (TargetEnemyTags.Contains(other.gameObject.tag))
             {

@@ -47,6 +47,7 @@ GameObject:
   - 82: {fileID: 8205930}
   - 114: {fileID: 11496884}
   - 114: {fileID: 11468416}
+  - 114: {fileID: 11410746}
   m_Layer: 0
   m_Name: Tow_1Rocket
   m_TagString: Untagged
@@ -353,6 +354,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11410746
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5087c308dfce3834d92d00a6d2d5dede, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11468416
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -389,9 +401,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 761f601bc6dc8e14dad0f0efca30c71c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myUpgrade: {fileID: 100004, guid: eb7b8d2c185b5b74c94312e29a88edbb, type: 2}
-  myUpgradeCost: 100
-  myUpgradeName: Super Rocket Tower
+  myUpgrade: {fileID: 11490508, guid: eb7b8d2c185b5b74c94312e29a88edbb, type: 2}
+  myCost: 80
+  mySellMultiplier: .5
+  myName: Rocket
   myProjectile: {fileID: 100002, guid: 4feba2712acd23547b0fd8a78cfc424a, type: 2}
   reloadTime: .75
   turnSpeed: 5

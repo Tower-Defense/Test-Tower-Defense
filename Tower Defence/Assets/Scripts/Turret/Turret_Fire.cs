@@ -33,7 +33,7 @@ public class Turret_Fire : Turret_Barrel_Base
 
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerStay(Collider other)
     {
         if (myTarget != null)
         {
