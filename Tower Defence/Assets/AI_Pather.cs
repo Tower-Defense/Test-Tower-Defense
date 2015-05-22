@@ -6,7 +6,9 @@ using Pathfinding.RVO;
 
 public class AI_Pather : MonoBehaviour {
 
-	public Transform target;
+	public Vector3 target;
+    public Transform enemyFront;
+    public float turnSpeed = 10.0f;
 
 	Seeker seeker;
     Path path;
@@ -19,8 +21,9 @@ public class AI_Pather : MonoBehaviour {
     float maxWaypointDistance = 3f;
 
 	void Start() {
+        target = GameObject.FindWithTag("target").transform.position;
 		seeker = GetComponent<Seeker>();
-		seeker.StartPath( transform.position, target.position, OnPathComplete );
+		seeker.StartPath( transform.position, target, OnPathComplete );
         characterController = GetComponent<CharacterController>();
 	}
 
@@ -56,6 +59,11 @@ public class AI_Pather : MonoBehaviour {
         Vector3 dir = (path.vectorPath[currentWaypoint] - transform.position).normalized * speed * Time.fixedDeltaTime;
        
         characterController.SimpleMove(dir);
+
+        enemyFront.LookAt(path.vectorPath[currentWaypoint]);
+        transform.rotation = Quaternion.Lerp(transform.rotation,
+                                             enemyFront.rotation,
+                                             turnSpeed);
 
         if (Vector3.Distance(transform.position, path.vectorPath[currentWaypoint]) < maxWaypointDistance)
         {

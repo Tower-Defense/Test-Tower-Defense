@@ -12,6 +12,7 @@ TagManager:
   - Ground Enemy
   - PlayerBase
   - Fire
+  - target
   layers:
   - Default
   - TransparentFX
