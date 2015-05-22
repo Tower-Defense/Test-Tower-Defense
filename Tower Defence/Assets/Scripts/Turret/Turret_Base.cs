@@ -6,8 +6,12 @@ using System.Collections;
 /// </summary>
 public class Turret_Base : MonoBehaviour {
 
-	public GameObject myUpgrade = null;
-	public int myUpgradeCost = 0;
-	public string myUpgradeName = "";
+    public Turret_Base myUpgrade = null;
+	public int myCost = 50;
+    public float mySellMultiplier = 0.5f;
+	public string myName = "";
+
+
+    
 	
 }

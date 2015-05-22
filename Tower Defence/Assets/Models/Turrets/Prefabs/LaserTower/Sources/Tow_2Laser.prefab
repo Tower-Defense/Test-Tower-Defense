@@ -64,6 +64,7 @@ GameObject:
   - 82: {fileID: 8219492}
   - 114: {fileID: 11446222}
   - 114: {fileID: 11442426}
+  - 114: {fileID: 11453304}
   m_Layer: 0
   m_Name: Tow_2Laser
   m_TagString: Untagged
@@ -397,9 +398,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a94344a49afe064cab6282eacd6802e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myUpgrade: {fileID: 100006, guid: 62b2b48d66f8a3c42acb7e96acc10475, type: 2}
-  myUpgradeCost: 150
-  myUpgradeName: Mega Laser Gun
+  myUpgrade: {fileID: 11479688, guid: 62b2b48d66f8a3c42acb7e96acc10475, type: 2}
+  myCost: 90
+  mySellMultiplier: .5
+  myName: Super Laser
   myProjectile: {fileID: 162668, guid: 91a340f68f7eb664b9a00ec0180045bc, type: 2}
   reloadTime: .300000012
   turnSpeed: 10
@@ -439,6 +441,17 @@ MonoBehaviour:
   viewIdField: 0
   instantiationId: -1
   isRuntimeInstantiated: 0
+--- !u!114 &11453304
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5087c308dfce3834d92d00a6d2d5dede, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &13513470
 SphereCollider:
   m_ObjectHideFlags: 1

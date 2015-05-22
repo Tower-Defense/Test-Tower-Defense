@@ -64,6 +64,7 @@ GameObject:
   - 82: {fileID: 8276744}
   - 114: {fileID: 11447468}
   - 114: {fileID: 11405490}
+  - 114: {fileID: 11467262}
   m_Layer: 0
   m_Name: Tow_3Rocket
   m_TagString: Untagged
@@ -517,7 +518,8 @@ MonoBehaviour:
   onSerializeTransformOption: 3
   onSerializeRigidBodyOption: 2
   ownershipTransfer: 0
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 0}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 0
   instantiationId: -1
@@ -534,8 +536,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myUpgrade: {fileID: 0}
-  myUpgradeCost: 0
-  myUpgradeName: 
+  myCost: 150
+  mySellMultiplier: .5
+  myName: Mega Rocket
   myProjectile: {fileID: 100002, guid: 4feba2712acd23547b0fd8a78cfc424a, type: 2}
   reloadTime: .25
   turnSpeed: 15
@@ -554,6 +557,17 @@ MonoBehaviour:
   pivot_Pan: {fileID: 400002}
   aim_Tilt: {fileID: 457696}
   aim_Pan: {fileID: 459176}
+--- !u!114 &11467262
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5087c308dfce3834d92d00a6d2d5dede, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &13547608
 SphereCollider:
   m_ObjectHideFlags: 1

@@ -50,6 +50,7 @@ GameObject:
   - 198: {fileID: 19845482}
   - 199: {fileID: 19962470}
   - 114: {fileID: 11466948}
+  - 114: {fileID: 11416996}
   m_Layer: 0
   m_Name: Projectile_Fire
   m_TagString: Fire
@@ -108,7 +109,7 @@ MeshRenderer:
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
-  m_ReflectionProbeUsage: 0
+  m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
@@ -125,6 +126,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 162240}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &11416996
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 162240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5087c308dfce3834d92d00a6d2d5dede, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11456814
 MonoBehaviour:
   m_ObjectHideFlags: 1

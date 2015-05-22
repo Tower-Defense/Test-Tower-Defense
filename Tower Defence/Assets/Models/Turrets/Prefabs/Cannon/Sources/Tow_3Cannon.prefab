@@ -47,6 +47,7 @@ GameObject:
   - 114: {fileID: 11425504}
   - 135: {fileID: 13535366}
   - 114: {fileID: 11420808}
+  - 114: {fileID: 11408072}
   m_Layer: 0
   m_Name: Tow_3Cannon
   m_TagString: Untagged
@@ -381,6 +382,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11408072
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5087c308dfce3834d92d00a6d2d5dede, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11420808
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -418,8 +430,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myUpgrade: {fileID: 0}
-  myUpgradeCost: 0
-  myUpgradeName: 
+  myCost: 120
+  mySellMultiplier: .5
+  myName: Mega Cannon
   myProjectile: {fileID: 127316, guid: 47857e0a54b8fb3438f2d6200a9cd32d, type: 2}
   reloadTime: 1
   turnSpeed: 15

@@ -4,45 +4,50 @@ using UnityEngine.UI;
 
 public class Options : MonoBehaviour
 {
+    public enum DifficultiyTypes
+    {
+        Easy = 0,
+        Middle = 1,
+        Hard = 2
+    };
+    DifficultiyTypes _difficultyType = DifficultiyTypes.Easy;
+
+    public float[] difficultyMultipliers = { 1.0f, 
+                                               2.0f, 
+                                               3.0f};
+
     public Toggle Music;
     public Toggle Sound;
     public Text Difficuty; 
 
-    private bool _music;
-    private bool _sound;
     private string _difficulty;
     
     void Awake ()
     {
-        Music.isOn = _music = PlayerPrefs.GetInt("Music", 1) > 0;
-        Sound.isOn = _sound = PlayerPrefs.GetInt("Sound", 1) > 0;
-        Difficuty.text = _difficulty = PlayerPrefs.GetString("Diffciculty", "Easy"); 
+        Music.isOn = GameController.isMusic;
+        Sound.isOn = GameController.isSound;
+        _difficultyType = (DifficultiyTypes) PlayerPrefs.GetInt("DiffcicultyType", 0);
+        Difficuty.text = _difficultyType.ToString();
     }
 
     public void SetMusic()
-    {
-        
-        _music = Music.isOn;
-        Camera.main.GetComponent<AudioSource>().enabled = _music;
-        PlayerPrefs.SetInt("Music", _music ? 1 : 0 );
-        Debug.Log("SetMusic:" + _music.ToString());
+    {        
+        GameController.isMusic = Music.isOn;
     }
 
     public void SetSound()
     {
-        
-        _sound = Sound.isOn;
-        PlayerPrefs.SetInt("Sound", _sound ? 1 : 0);
-        Debug.Log("SetSound:" + _sound.ToString());
+        GameController.isSound = Sound.isOn;
     }
 
 
-    public void ChooseDifficulty(Text difficulty)
+    public void ChooseDifficulty(int difficultyType)
     {
-        
-        Difficuty.text = _difficulty = difficulty.text;
-        PlayerPrefs.SetString("Diffciculty", _difficulty);
-        Debug.Log("ChooseDifficulty" + _difficulty);
+        _difficultyType = (DifficultiyTypes)difficultyType;
+        Difficuty.text = _difficultyType.ToString();
+        PlayerPrefs.SetInt("DiffcicultyType", (int)_difficultyType);
+        PlayerPrefs.SetFloat("DifficultyMultiplier", difficultyMultipliers[(int)_difficultyType]);
+        Debug.Log("ChooseDifficultyType: " + _difficultyType);
 
     }
 }

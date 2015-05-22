@@ -28,6 +28,7 @@ GameObject:
   - 198: {fileID: 19852126}
   - 199: {fileID: 19957950}
   - 114: {fileID: 11402588}
+  - 114: {fileID: 11423992}
   m_Layer: 0
   m_Name: Explosion_LaserFlare
   m_TagString: Untagged
@@ -102,6 +103,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeTime: 1
+--- !u!114 &11423992
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 155954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5087c308dfce3834d92d00a6d2d5dede, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &19820506
 ParticleSystem:
   m_ObjectHideFlags: 1

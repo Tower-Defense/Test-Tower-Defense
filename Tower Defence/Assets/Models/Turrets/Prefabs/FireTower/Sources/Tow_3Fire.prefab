@@ -64,6 +64,7 @@ GameObject:
   - 114: {fileID: 11441948}
   - 114: {fileID: 11453756}
   - 82: {fileID: 8217042}
+  - 114: {fileID: 11427382}
   m_Layer: 0
   m_Name: Tow_3Fire
   m_TagString: Untagged
@@ -482,6 +483,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11427382
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5087c308dfce3834d92d00a6d2d5dede, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11437120
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -531,8 +543,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myUpgrade: {fileID: 0}
-  myUpgradeCost: 0
-  myUpgradeName: 
+  myCost: 100
+  mySellMultiplier: .5
+  myName: Mega Fire
   myProjectile: {fileID: 134852}
   reloadTime: 0
   turnSpeed: 20

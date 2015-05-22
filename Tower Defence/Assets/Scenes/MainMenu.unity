@@ -1145,10 +1145,10 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 570734310}
         m_MethodName: ChooseDifficulty
-        m_Mode: 2
+        m_Mode: 3
         m_Arguments:
-          m_ObjectArgument: {fileID: 572023214}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Text, UnityEngine.UI, Version=1.0.0.0,
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -3781,6 +3781,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64d1474a8d6249f4d860b60689eb373d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  difficultyMultipliers:
+  - 1
+  - 2
+  - 3
   Music: {fileID: 518982747}
   Sound: {fileID: 1049804233}
   Difficuty: {fileID: 1537037121}
@@ -4428,7 +4432,7 @@ ParticleSystem:
   InitialModule:
     enabled: 1
     startLifetime:
-      scalar: 12
+      scalar: 13
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -4461,7 +4465,7 @@ ParticleSystem:
         m_PostInfinity: 2
       minMaxState: 0
     startSpeed:
-      scalar: 15
+      scalar: 8
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -4476,7 +4480,7 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - time: 0
-          value: .666666687
+          value: .625
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -4575,7 +4579,7 @@ ParticleSystem:
         rgba: 4294967295
       maxColor:
         serializedVersion: 2
-        rgba: 385744381
+        rgba: 2013265920
       minMaxState: 0
     startSize:
       scalar: 40
@@ -4635,7 +4639,7 @@ ParticleSystem:
       minMaxState: 0
     gravityModifier: 0
     inheritVelocity: 0
-    maxNumParticles: 200
+    maxNumParticles: 150
   ShapeModule:
     serializedVersion: 2
     enabled: 1
@@ -4643,9 +4647,9 @@ ParticleSystem:
     radius: 1
     angle: 25
     length: 5
-    boxX: 1
+    boxX: 10
     boxY: 30
-    boxZ: 40
+    boxZ: 1
     arc: 360
     placementMode: 0
     m_Mesh: {fileID: 0}
@@ -4654,7 +4658,7 @@ ParticleSystem:
     enabled: 1
     m_Type: 0
     rate:
-      scalar: 20
+      scalar: 15
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -5445,9 +5449,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 669904448}
-  m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
-  m_LocalPosition: {x: -71.8000031, y: 3.20000005, z: 59.2000008}
-  m_LocalScale: {x: 1.54874265, y: 2.41249847, z: 1}
+  m_LocalRotation: {x: -.5, y: .5, z: .500000119, w: .49999994}
+  m_LocalPosition: {x: -4.19999981, y: -38.9000015, z: 59.2000008}
+  m_LocalScale: {x: 1.54874265, y: 4.91544104, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -8829,12 +8833,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 570734310}
         m_MethodName: ChooseDifficulty
-        m_Mode: 2
+        m_Mode: 3
         m_Arguments:
-          m_ObjectArgument: {fileID: 1462023708}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Text, UnityEngine.UI, Version=1.0.0.0,
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -9132,12 +9136,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 570734310}
         m_MethodName: ChooseDifficulty
-        m_Mode: 2
+        m_Mode: 3
         m_Arguments:
-          m_ObjectArgument: {fileID: 919648341}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Text, UnityEngine.UI, Version=1.0.0.0,
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
