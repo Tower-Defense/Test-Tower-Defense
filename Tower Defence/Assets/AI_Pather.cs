@@ -63,7 +63,7 @@ public class AI_Pather : MonoBehaviour {
         enemyFront.LookAt(path.vectorPath[currentWaypoint]);
         transform.rotation = Quaternion.Lerp(transform.rotation,
                                              enemyFront.rotation,
-                                             turnSpeed);
+                                             Time.deltaTime * turnSpeed);
 
         if (Vector3.Distance(transform.position, path.vectorPath[currentWaypoint]) < maxWaypointDistance)
         {

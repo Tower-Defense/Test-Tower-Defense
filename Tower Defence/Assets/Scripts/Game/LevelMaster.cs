@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public class LevelMaster : MonoBehaviour
 {
-
     // From pathfinding
     public AstarPath AstarController;
 
@@ -13,6 +13,8 @@ public class LevelMaster : MonoBehaviour
     public bool upgradePanelOpen = false;
     public bool settingsPanelOpen = false;
     public bool pause = false;
+    public bool gameOver = false;
+    public bool buildPanelOpen = false;
 
     //Player variables
     public int livesCount = 10;
@@ -56,37 +58,37 @@ public class LevelMaster : MonoBehaviour
 
     //--- GUI Items
 
-    //GUI Variables
+    //---Game Info
     public UILabel waveText;
     public UILabel livesText;
     public UILabel scoreText;
     public UILabel cashText;
-    public UILabel upgradeText;
-    public GameObject upgradeBtn;
+    //---
 
-    //NGUI items
-    public bool buildPanelOpen = false;
+    //---TweenPositions  
     public TweenPosition buildPanelTweener;
     public TweenRotation buildPanelArrowTweener;
     public TweenPosition settingsPanelTweener;
     public TweenPosition upgradePanelTweener;
-    //
+    public TweenPosition gameOverPanelTweener;
+    //---
 
-    //Placement Plane items
+    //---Placement Plane items
     public GameObject placementPlanesRoot;
     public Material hoverMat;
     public LayerMask placementLayerMask;
     private Material originalMat;
     private GameObject lastHitObj;
-    //
+    //---
 
-    //Upgrade vars
+    //---Upgrade
     private PlacementPlane focusedPlane;
     private Turret_Base structureToUpgrade;
     private GameObject upgradeStructure;
     private int upgradeCost;
-    //
-
+    public UILabel upgradeText;
+    public GameObject upgradeBtn;
+    //---
 
     //--- Speed buttons
     public GameObject BtnPlay;
@@ -94,19 +96,20 @@ public class LevelMaster : MonoBehaviour
     public UILabel BtnX2;
     //---
 
-    // ThreadSafe singletone
-    	private LevelMaster(){}
-    	private static LevelMaster instance;
-    	public static LevelMaster Instance
-    	{
-    		get 
-    		{
-    			//He is already created, so we find him
-    			return instance ?? 
-    				(instance = GameObject.FindWithTag ("LevelMaster").GetComponent <LevelMaster>()); 
-    		}
-    	}
+    //--- Game Over
+    public UILabel GameOverText;
+    //---
 
+    // ThreadSafe singletone
+    private LevelMaster() { }
+
+    public static LevelMaster Instance { get; private set; }
+
+    public void Awake()
+    {
+        
+        Instance = this;
+    }
 
     // Use this for initialization
     void Start()
@@ -147,6 +150,12 @@ public class LevelMaster : MonoBehaviour
     void Update()
     {
         //---GUI
+        if (livesCount <= 0)
+        {
+            GameOverPanel();
+            return;
+        }
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             ToggleSettingsPanel();
@@ -243,26 +252,10 @@ public class LevelMaster : MonoBehaviour
         }
     }
 
-    public void ConfirmUpgrade()
-    {
-        var spawnPos = structureToUpgrade.transform.position;
-        var spawnRot = structureToUpgrade.transform.rotation;
-        Destroy(structureToUpgrade.gameObject);
-        GameObject newStructure = Instantiate(upgradeStructure, spawnPos, spawnRot) as GameObject;
-        focusedPlane.myStructure = newStructure;
 
-        cashCount -= upgradeCost;
-        UpdateGUI();
-        upgradePanelTweener.Play(false);
-        upgradePanelOpen = false;
-    }
+    #region Moving Panels
 
-    public void CancelUpgrade()
-    {
-        upgradePanelTweener.Play(false);
-        upgradePanelOpen = false;
-    }
-
+    #region Upgrade Panel
     // Upgrade turret
     private void ShowUpgradeGUI()
     {
@@ -284,25 +277,95 @@ public class LevelMaster : MonoBehaviour
         }
     }
 
+    public void ConfirmUpgrade()
+    {
+        var spawnPos = structureToUpgrade.transform.position;
+        var spawnRot = structureToUpgrade.transform.rotation;
+        Destroy(structureToUpgrade.gameObject);
+        GameObject newStructure = Instantiate(upgradeStructure, spawnPos, spawnRot) as GameObject;
+        focusedPlane.myStructure = newStructure;
+
+        cashCount -= upgradeCost;
+        UpdateGUI();
+        upgradePanelTweener.Play(false);
+        upgradePanelOpen = false;
+    }
+
+    public void CancelUpgrade()
+    {
+        upgradePanelTweener.Play(false);
+        upgradePanelOpen = false;
+    }
+
+    #endregion
+
+
+    #region Settings Panel
     // Upgrade Structures
     public void ToggleSettingsPanel()
     {
         if (!settingsPanelOpen && !pause)
         {
-                        
+
             settingsPanelOpen = true;
             settingsPanelTweener.Play(true);
             SetPause();
             Debug.Log("Open settings panel");
         }
         else if (settingsPanelOpen && pause)
-        {                       
+        {
             settingsPanelOpen = false;
             settingsPanelTweener.Play(false);
             SetDefaultSpeedOfGame();
-            Debug.Log("Close settings panel"); 
+            Debug.Log("Close settings panel");
         }
     }
+    #endregion
+
+    #region GameOver
+    public void GameOverPanel()
+    {
+        if (!settingsPanelOpen && !gameOver)
+        {
+            gameOver = true;
+            gameOverPanelTweener.Play(true);            
+
+            // Counter of Score
+            int scoreCounter = PlayerPrefs.GetInt("ScoreCounter", -1);
+            scoreCounter++;
+            PlayerPrefs.SetInt("ScoreCounter", scoreCounter);
+
+            // Save Date of Game
+            var time = System.DateTime.Now;
+            
+            PlayerPrefs.SetString("ScoreDate" + scoreCounter.ToString(),
+                System.DateTime.SpecifyKind(time, System.DateTimeKind.Local).ToString());
+            // Save score count
+            PlayerPrefs.SetInt("Score" + scoreCounter.ToString(), scoreCount);
+
+            // if it is a high score
+            var highScore = PlayerPrefs.GetInt("HighScore", 0);
+            if (scoreCount > highScore)
+            {
+                PlayerPrefs.SetInt("HighScore", scoreCount);
+                GameOverText.color = Color.green;
+                GameOverText.text = "New record!\n Score: " + scoreCount.ToString();
+            }
+            else
+            {
+                GameOverText.color = new Color32(8, 214, 255, 255); // light blue(standart)
+                GameOverText.text = "Game over!\n You score:\n" + scoreCount.ToString();
+                
+            }
+            
+            SetPause();
+
+            Debug.Log("Game over");
+        }
+
+    }
+
+    #endregion
 
     public void GoToMainMenu()
     {
@@ -310,6 +373,14 @@ public class LevelMaster : MonoBehaviour
         PlayerPrefs.SetInt("LoadLevel", 1);
         Application.LoadLevel(0);
         Debug.Log("Go to Main Menu");
+    }
+
+    public void RestartGame()
+    {
+        setTimeScale(1);
+        PlayerPrefs.SetInt("LoadLevel", Application.loadedLevel);
+        Application.LoadLevel(0);
+        Debug.Log("Restart game");
     }
 
     #region setTimeScale
@@ -329,7 +400,7 @@ public class LevelMaster : MonoBehaviour
     }
     public void SetDefaultSpeedOfGame()
     {
-        if (!settingsPanelOpen)
+        if (!settingsPanelOpen && !gameOver)
         {
             Debug.Log("x1");
             pause = false;
@@ -346,7 +417,7 @@ public class LevelMaster : MonoBehaviour
     }
     public void Set2xSpeedOfGame()
     {
-        if (!settingsPanelOpen)
+        if (!settingsPanelOpen && !gameOver)
         {
             if (BtnX2.text == "X2")
             {
@@ -365,9 +436,11 @@ public class LevelMaster : MonoBehaviour
         {
             Debug.Log("can't x2");
         }
-        
+
 
     }
+    #endregion
+
     #endregion
 
 
