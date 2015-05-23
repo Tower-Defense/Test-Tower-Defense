@@ -6,7 +6,7 @@ using Pathfinding.RVO;
 
 public class AI_Pather : MonoBehaviour {
 
-	public Vector3 target;
+	public Transform target;
     public Transform enemyFront;
     public float turnSpeed = 10.0f;
 
@@ -21,9 +21,9 @@ public class AI_Pather : MonoBehaviour {
     float maxWaypointDistance = 3f;
 
 	void Start() {
-        target = GameObject.FindWithTag("target").transform.position;
+        
 		seeker = GetComponent<Seeker>();
-		seeker.StartPath( transform.position, target, OnPathComplete );
+		seeker.StartPath( transform.position, target.position, OnPathComplete );
         characterController = GetComponent<CharacterController>();
 	}
 
