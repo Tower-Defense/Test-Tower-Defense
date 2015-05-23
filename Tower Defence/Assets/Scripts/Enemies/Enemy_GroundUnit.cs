@@ -20,7 +20,7 @@ public class Enemy_GroundUnit : Enemy_Base {
 
 	// Use this for initialization
 	void Start () {
-		targetPosition = GameObject.FindWithTag ("target").transform.position;
+        targetPosition = GameObject.FindWithTag("PlayerBase").transform.position;
 		GetNewPath ();	
 	
 	}

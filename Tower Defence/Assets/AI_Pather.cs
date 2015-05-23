@@ -6,25 +6,25 @@ using Pathfinding.RVO;
 
 public class AI_Pather : MonoBehaviour {
 
-	public Vector3 target;
+	public Transform target;
     public Transform enemyFront;
     public float turnSpeed = 10.0f;
 
-	Seeker seeker;
-    Path path;
-    int currentWaypoint;
+	public Seeker seeker;
+    public Path path;
+    public int currentWaypoint;
 
-    float speed = 1f;
+    public float speed = 500f;
 
-    CharacterController characterController;
+    public CharacterController characterController;
 
-    float maxWaypointDistance = 3f;
+    public float maxWaypointDistance = 3f;
 
 	void Start() {
-        target = GameObject.FindWithTag("target").transform.position;
-		seeker = GetComponent<Seeker>();
-		seeker.StartPath( transform.position, target, OnPathComplete );
+        seeker = GetComponent<Seeker>();
         characterController = GetComponent<CharacterController>();
+		seeker.StartPath( transform.position, target.position, OnPathComplete );
+        
 	}
 
 	public void OnPathComplete( Path p ) {
@@ -54,15 +54,21 @@ public class AI_Pather : MonoBehaviour {
 
         
 
-        transform.position = path.vectorPath[currentWaypoint];
+        // Wtf? Why you do this?
+        // It's look like teleport
+      //  transform.position = path.vectorPath[currentWaypoint];
 
-        Vector3 dir = (path.vectorPath[currentWaypoint] - transform.position).normalized * speed * Time.fixedDeltaTime;
+        Vector3 dir = (path.vectorPath[currentWaypoint] - transform.position).normalized;
+            dir*= speed * Time.fixedDeltaTime;
        
         characterController.SimpleMove(dir);
 
+
         enemyFront.LookAt(path.vectorPath[currentWaypoint]);
+
         transform.rotation = Quaternion.Lerp(transform.rotation,
-                                             enemyFront.rotation,
+                                            enemyFront.rotation,
+
                                              Time.deltaTime * turnSpeed);
 
         if (Vector3.Distance(transform.position, path.vectorPath[currentWaypoint]) < maxWaypointDistance)
