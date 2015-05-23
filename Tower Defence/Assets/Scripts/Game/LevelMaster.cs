@@ -111,6 +111,10 @@ public class LevelMaster : MonoBehaviour
         // Get difficulty multiplier
         difficultyMultiplier *= PlayerPrefs.GetFloat("DifficultyMultiplier", 1.0f);
     }
+    void OnApplicationQuit()
+    {
+        PlayerPrefs.SetInt("LoadLevel", 1);
+    }
 
     // Use this for initialization
     void Start()
@@ -366,7 +370,7 @@ public class LevelMaster : MonoBehaviour
             gameOverPanelTweener.Play(true);
 
             // Counter of Score
-            int scoreCounter = PlayerPrefs.GetInt("ScoreCounter", -1);
+            int scoreCounter = PlayerPrefs.GetInt("ScoreCounter", 0);
             scoreCounter++;
             PlayerPrefs.SetInt("ScoreCounter", scoreCounter);
 
