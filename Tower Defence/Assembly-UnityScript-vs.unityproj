@@ -75,6 +75,12 @@
      <Compile Include="Assets\MOBA and Tower Defense\Standard Assets\Image Effects (Pro Only)\Tonemapping.js" />
      <Compile Include="Assets\MOBA and Tower Defense\Standard Assets\Image Effects (Pro Only)\Triangles.js" />
      <Compile Include="Assets\MOBA and Tower Defense\Standard Assets\Image Effects (Pro Only)\Vignetting.js" />
+     <Compile Include="Assets\Medieval_House\Scripts\OpenDoor.js" />
+     <Compile Include="Assets\Medieval_House\Standard Assets\Character Controllers\Sources\Scripts\CharacterMotor.js" />
+     <Compile Include="Assets\Medieval_House\Standard Assets\Character Controllers\Sources\Scripts\FPSInputController.js" />
+     <Compile Include="Assets\Medieval_House\Standard Assets\Character Controllers\Sources\Scripts\PlatformInputController.js" />
+     <Compile Include="Assets\Medieval_House\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonCamera.js" />
+     <Compile Include="Assets\Medieval_House\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonController.js" />
      <Compile Include="Assets\Models\Enemies\MonsterBaseTeam\Scripts\ButtonInterface.js" />
      <Compile Include="Assets\Models\Enemies\MonsterBaseTeam\Scripts\CamControl.js" />
      <Compile Include="Assets\Models\Enemies\MonsterBaseTeam\Scripts\StringHold.js" />
@@ -94,6 +100,7 @@
      <None Include="Assets\MOBA and Tower Defense\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ShowAlphaChannel.shader" />
      <None Include="Assets\NGUI\Examples\Atlases\Wooden\Arimo14.txt" />
      <None Include="Assets\MOBA and Tower Defense\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlowConeTap.shader" />
+     <None Include="Assets\Medieval_House\Info.txt" />
      <None Include="Assets\MOBA and Tower Defense\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\SunShaftsComposite.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\GUI - Text Shader (SoftClip).shader" />
      <None Include="Assets\MOBA and Tower Defense\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ColorCorrectionCurves.shader" />
