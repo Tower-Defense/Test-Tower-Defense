@@ -61,7 +61,7 @@ GameObject:
   - 4: {fileID: 494180}
   m_Layer: 0
   m_Name: GroundSpawns
-  m_TagString: Untagged
+  m_TagString: GroundSpawns
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

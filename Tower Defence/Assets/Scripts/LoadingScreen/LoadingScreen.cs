@@ -3,17 +3,11 @@ using System.Collections;
 
 public class LoadingScreen : MonoBehaviour {
 
-	public int level;
+
 	public Texture2D[] texture;
 
 	IEnumerator Start() {
-        level = PlayerPrefs.GetInt("LoadLevel", 1);
-        if (level >= Application.levelCount)
-        {
-            level = 1;
-            PlayerPrefs.SetInt("LoadLevel", level);
-        }
-		AsyncOperation async = Application.LoadLevelAsync(level);
+		AsyncOperation async = Application.LoadLevelAsync(GameController.currentLevel);
 		LoadingImage ();
 		yield return async;
 	}

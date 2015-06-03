@@ -8,8 +8,7 @@ public class Enemy_Base : MonoBehaviour {
 
     private LevelMaster levelMaster;
 
-	public ParticleEmitter smokeTrail;
-	public GameObject explosionEffect;
+	
 
 	public int myCashValue = 50;
 	public Vector2 speedRange = new Vector2(7.0f, 10.0f);
@@ -36,16 +35,20 @@ public class Enemy_Base : MonoBehaviour {
 
 	public void TakeDamage(float damageAmount) {
 		if (health > 0) {
+            DamageEffect();
 			health -= damageAmount;
 			if (health <= 0) {
 				Explode ();
 				return;
 			} else if (health / maxHealth <= 0.75) {
 				// smoke
-				smokeTrail.emit = true;
+                HardDamageEffect();				
 			}
 		}
 	}
+
+    protected virtual void HardDamageEffect() { }
+    protected virtual void DamageEffect() { }
 	
 	/// <summary>
 	/// Explode this instance.
@@ -57,10 +60,15 @@ public class Enemy_Base : MonoBehaviour {
 		levelMaster.enemyCount--;
 		levelMaster.cashCount += myCashValue;
 		levelMaster.scoreCount += (int)(maxHealth + forwardSpeed * levelMaster.difficultyMultiplier);
-		levelMaster.UpdateGUI ();
-		
-		Instantiate (explosionEffect, transform.position, Quaternion.identity);
-		Destroy (gameObject);
+
+        levelMaster.UpdateGUI ();
+
+        ExplosionEffect();
+        
+            
 	}
+    protected virtual void ExplosionEffect() {
+        Destroy(gameObject);
+    }
 
 }

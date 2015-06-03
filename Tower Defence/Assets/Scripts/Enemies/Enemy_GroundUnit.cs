@@ -3,7 +3,8 @@ using System.Collections;
 using Pathfinding;
 
 
-public class Enemy_GroundUnit : Enemy_Base {
+public class Enemy_GroundUnit : MachineEnemy_Base
+{
 
 	public Transform tankTurret;
 	public Transform tankBody;

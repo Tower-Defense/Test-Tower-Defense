@@ -42,12 +42,11 @@ public class Menu : MonoBehaviour {
 	
 	public void StartLevel(int level)
 	{
-        PlayerPrefs.SetInt("LoadLevel", level);
-		Application.LoadLevel (0);
+        GameController.GoNextLevel(level);
 	}
 	
 	public void NewGame()
 	{
-        StartLevel(2);
+        GameController.GoNextLevel(3);
 	}
 }

@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Attack_Jet : Enemy_Base {
+public class Attack_Jet : MachineEnemy_Base
+{
 
 	public Transform compass;
 	public Vector2 heightRange = new Vector2(10.0f, 18.0f);

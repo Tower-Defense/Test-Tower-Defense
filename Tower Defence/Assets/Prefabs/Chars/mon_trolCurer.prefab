@@ -25,14 +25,15 @@ GameObject:
   - 4: {fileID: 485940}
   - 111: {fileID: 11148444}
   - 143: {fileID: 14388298}
-  - 136: {fileID: 13651370}
   - 114: {fileID: 11424166}
   - 114: {fileID: 11457926}
   - 114: {fileID: 11438468}
   - 114: {fileID: 11460526}
+  - 114: {fileID: 11485674}
+  - 65: {fileID: 6592660}
   m_Layer: 0
   m_Name: mon_trolCurer
-  m_TagString: Untagged
+  m_TagString: Ground Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1668,8 +1669,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 106300}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 140.976364, y: 0, z: 111.083313}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 468632}
   - {fileID: 478400}
@@ -1808,6 +1809,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 110430}
   m_Mesh: {fileID: 4300000, guid: f7ea449153453b34f865e64d704427e1, type: 3}
+--- !u!65 &6592660
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 106300}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2.20000005, z: 1}
+  m_Center: {x: 0, y: 1.20000005, z: 0}
 --- !u!111 &11125542
 Animation:
   m_ObjectHideFlags: 1
@@ -1907,9 +1920,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d3adb9bdceb7474c99c0196653c7bd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  targetPosition: {x: 0, y: 0, z: 0}
   enemyFront: {fileID: 468632}
   turnSpeed: 10
+  seeker: {fileID: 0}
+  currentWaypoint: 0
+  speed: 500
+  characterController: {fileID: 0}
+  maxWaypointDistance: 3
 --- !u!114 &11459172
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1939,8 +1957,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   priority: 3
-  penalty: 1000
-  randomStep: 10
+  penalty: 50
+  randomStep: 5
+--- !u!114 &11485674
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 106300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea5571f2082a4d44f9c3870d8931cd6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myCashValue: 50
+  speedRange: {x: 7, y: 10}
+  health: 100
 --- !u!114 &11490192
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1955,19 +1987,6 @@ MonoBehaviour:
   buttonInterface: {fileID: 0}
   weaponGroup: {fileID: 0}
   weaponHand: {fileID: 486330}
---- !u!136 &13651370
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 106300}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 1
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 1.29999995, z: 0}
 --- !u!137 &13770938
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

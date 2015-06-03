@@ -15,7 +15,7 @@ public class PlayerBase : MonoBehaviour {
 		if (other.gameObject.tag == "Ground Enemy" 
 		    || other.gameObject.tag == "Air Enemy") {
 	//		Debug.Log("Boom");
-			PhotonNetwork.Destroy(other.gameObject);
+            Destroy(other.gameObject);
 			levelMaster.enemyCount--;
 			levelMaster.livesCount--;
 			levelMaster.UpdateGUI ();

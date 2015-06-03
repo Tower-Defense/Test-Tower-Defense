@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 
-public static class GameController 
+public static class GameController
 {
     public delegate void VoidEventHandler();
 
@@ -14,9 +14,36 @@ public static class GameController
     public static event VoidEventHandler BeforeGoToMainMenu;
     public static event VoidEventHandler BeforeGoNextLevel;
 
-    public static int currentLevel = 1;
-    public static int prevLevel = 0;
-    
+
+    public static int prevLevel = 1;
+    public static int currentLevel
+    {
+        get
+        {
+            return _currentLevel;
+        }
+        set
+        {
+            _currentLevel = value;
+        }
+    }
+    public static int _currentLevel = 1;
+
+    public static int currentMap
+    {
+        get
+        {
+            return _currentMap;
+        }
+        set
+        {
+            _currentMap = value;
+            PlayerPrefs.SetInt("MapNumber", _currentMap);
+        }
+    }
+    private static int _currentMap = 0;
+
+
 
     public static bool isSound
     {
@@ -59,7 +86,7 @@ public static class GameController
         }
         set
         {
-            if(value)
+            if (value)
             {
                 PauseGame();
             }
@@ -75,49 +102,55 @@ public static class GameController
         _isPause = true;
         Time.timeScale = 0;
         if (OnPause != null)
-            OnPause ();
+            OnPause();
     }
     public static void ResumeGame()
     {
         _isPause = false;
         Time.timeScale = 1;
         if (OnResume != null)
-            OnResume ();
+            OnResume();
     }
 
     public static void ReplayGame()
     {
-        if(_isPause)
-            ResumeGame();
-        PlayerPrefs.SetInt("LoadLevel", Application.loadedLevel);
-        Application.LoadLevel("Loading");
-    
         if (OnReplay != null)
-            OnReplay ();
+            OnReplay();
+        GoNextLevel();
     }
 
     public static void GoToMenu()
     {
-        if (_isPause)
-            ResumeGame();
         if (BeforeGoToMainMenu != null)
-            BeforeGoToMainMenu(); 
+            BeforeGoToMainMenu();
 
-        PlayerPrefs.SetInt("LoadLevel", 1);
-        Application.LoadLevel("Loading");       
+        GoNextLevel(1);
     }
 
 
-    public static void GoNextLevel(int levelInt)
+    public static void GoNextLevel(int level = 0)
     {
+        if (BeforeGoNextLevel != null)
+            BeforeGoNextLevel();
+
         if (_isPause)
             ResumeGame();
 
-        if (BeforeGoNextLevel != null)
-              BeforeGoNextLevel();
-        prevLevel = currentLevel;
-        currentLevel = levelInt;
-        Application.LoadLevel(levelInt);
+        if (level > 0)
+        {
+
+            prevLevel = currentLevel;
+            currentLevel = level;
+        }
+        else
+        {
+            _currentLevel = Application.loadedLevel;
+        }
+        Application.LoadLevel("Loading");
     }
-   
+
+
+
+
+
 }

@@ -13,6 +13,10 @@ TagManager:
   - PlayerBase
   - Fire
   - target
+  - PlacementPlanes
+  - FlyerSpawns
+  - GroundSpawns
+  - AStar
   layers:
   - Default
   - TransparentFX

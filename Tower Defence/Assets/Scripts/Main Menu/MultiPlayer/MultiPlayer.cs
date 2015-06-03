@@ -16,7 +16,7 @@ public class MultiPlayer : Photon.MonoBehaviour
 
     public InfoPanel infoPanel;
 
-    public int levelNum = 1;
+    public int levelNum = 2;
     //---
 
     //---Server Browser
@@ -163,7 +163,7 @@ public class MultiPlayer : Photon.MonoBehaviour
     public void StartGame()
     {
         PlayerPrefs.SetInt("LoadLevel", levelNum);
-        PhotonNetwork.LoadLevel("MainMenu");
+        PhotonNetwork.LoadLevel(0);
     }
 
     // Call after Master Server Event HostListReceived

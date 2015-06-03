@@ -29,8 +29,8 @@ public class LevelMaster : MonoBehaviour
 
     // Enemy Variables
     public GameObject[] enemyPrefabs;
-    public Transform flyerSpawns;
-    public Transform groundSpawns;
+    private Transform flyerSpawns;
+    private Transform groundSpawns;
     private Transform[] flyerSpawnPoints;
     private Transform[] groundSpawnPoints;
     public float respawnMinBase = 3.0f;
@@ -119,6 +119,12 @@ public class LevelMaster : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        AstarController = GameObject.FindGameObjectWithTag("AStar").GetComponent<AstarPath>();
+        placementPlanesRoot = GameObject.FindGameObjectWithTag("PlacementPlanes");
+        placementPlanesRoot.SetActive(false);
+        flyerSpawns = GameObject.FindGameObjectWithTag("FlyerSpawns").GetComponent<Transform>();
+        groundSpawns = GameObject.FindGameObjectWithTag("GroundSpawns").GetComponent<Transform>();
+
         // --- Build Panel
         var buildButtonsCount = buildButtons.Length;
         buildBtnGraphics = new UISprite[buildButtonsCount];
@@ -165,7 +171,7 @@ public class LevelMaster : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void OnGUI()
     {
         //---GUI
         if (livesCount <= 0)
@@ -232,7 +238,7 @@ public class LevelMaster : MonoBehaviour
                     foreach (GameObject theEnemy in
                             GameObject.FindGameObjectsWithTag("Ground Enemy"))
                     {
-                        theEnemy.GetComponent<Enemy_GroundUnit>().GetNewPath();
+                        theEnemy.GetComponent<AI_Pather>().GetNewPath();
                     }
 
                 }
@@ -241,7 +247,6 @@ public class LevelMaster : MonoBehaviour
                     ShowUpgradeGUI();
                 }
             }
-            //	}
         }
         //---End GUI
 
