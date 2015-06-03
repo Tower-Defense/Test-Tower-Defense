@@ -141,6 +141,7 @@
      <Compile Include="Assets\MOBA and Tower Defense\Standard Assets\Water (Pro Only)\Water4\Sources\Scripts\SpecularLighting.cs" />
      <Compile Include="Assets\MOBA and Tower Defense\Standard Assets\Water (Pro Only)\Water4\Sources\Scripts\WaterBase.cs" />
      <Compile Include="Assets\MOBA and Tower Defense\Standard Assets\Water (Pro Only)\Water4\Sources\Scripts\WaterTile.cs" />
+     <Compile Include="Assets\Medieval_House\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Game\EquipItems.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Game\EquipRandomItem.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Game\UICursor.cs" />
@@ -411,6 +412,7 @@
      <None Include="Assets\MOBA and Tower Defense\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ShowAlphaChannel.shader" />
      <None Include="Assets\NGUI\Examples\Atlases\Wooden\Arimo14.txt" />
      <None Include="Assets\MOBA and Tower Defense\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlowConeTap.shader" />
+     <None Include="Assets\Medieval_House\Info.txt" />
      <None Include="Assets\MOBA and Tower Defense\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\SunShaftsComposite.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\GUI - Text Shader (SoftClip).shader" />
      <None Include="Assets\MOBA and Tower Defense\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ColorCorrectionCurves.shader" />
