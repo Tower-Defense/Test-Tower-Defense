@@ -171,7 +171,7 @@ public class LevelMaster : MonoBehaviour
     }
 
     // Update is called once per frame
-    void OnGUI()
+    void Update()
     {
         //---GUI
         if (livesCount <= 0)

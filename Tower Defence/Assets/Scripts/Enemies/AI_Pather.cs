@@ -20,6 +20,8 @@ public class AI_Pather : MonoBehaviour {
 
     public float maxWaypointDistance = 3f;
 
+    public bool isStop = false;
+
 	void Start() {
         targetPosition = GameObject.FindGameObjectWithTag("PlayerBase")
             .GetComponent<Transform>()
@@ -50,7 +52,8 @@ public class AI_Pather : MonoBehaviour {
 
     void FixedUpdate()
     {
-        if (path == null)
+
+        if (path == null || isStop)
         {
             return;
         }

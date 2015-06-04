@@ -18,7 +18,8 @@ public class Enemy_Base : MonoBehaviour {
 
 	//Before Start()
 	//When script initial
-	void Awake() {
+    protected virtual void Start()
+    {
 		//connect to levelmaster
 		levelMaster = LevelMaster.Instance;
 
