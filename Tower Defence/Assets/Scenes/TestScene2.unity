@@ -87,17 +87,6 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &72828602 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 111024, guid: 13c0c1ca8be449f49b8f1acf40f9841b, type: 2}
-  m_PrefabInternal: {fileID: 2073105489}
---- !u!81 &72828603
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 72828602}
-  m_Enabled: 1
 --- !u!1001 &487440843
 Prefab:
   m_ObjectHideFlags: 0
@@ -135,6 +124,50 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 484782, guid: 382dd569d54638a4bb0f50b132b6cbdf, type: 2}
       propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 435414, guid: 382dd569d54638a4bb0f50b132b6cbdf, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -512.8302
+      objectReference: {fileID: 0}
+    - target: {fileID: 410836, guid: 382dd569d54638a4bb0f50b132b6cbdf, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 514.52832
+      objectReference: {fileID: 0}
+    - target: {fileID: 495302, guid: 382dd569d54638a4bb0f50b132b6cbdf, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -512.8302
+      objectReference: {fileID: 0}
+    - target: {fileID: 495302, guid: 382dd569d54638a4bb0f50b132b6cbdf, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -360
+      objectReference: {fileID: 0}
+    - target: {fileID: 495302, guid: 382dd569d54638a4bb0f50b132b6cbdf, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -55.1071205
+      objectReference: {fileID: 0}
+    - target: {fileID: 424878, guid: 382dd569d54638a4bb0f50b132b6cbdf, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 514.52832
+      objectReference: {fileID: 0}
+    - target: {fileID: 424878, guid: 382dd569d54638a4bb0f50b132b6cbdf, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -360
+      objectReference: {fileID: 0}
+    - target: {fileID: 424878, guid: 382dd569d54638a4bb0f50b132b6cbdf, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -55.1071205
+      objectReference: {fileID: 0}
+    - target: {fileID: 473988, guid: 382dd569d54638a4bb0f50b132b6cbdf, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -.849058568
+      objectReference: {fileID: 0}
+    - target: {fileID: 473988, guid: 382dd569d54638a4bb0f50b132b6cbdf, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198834, guid: 382dd569d54638a4bb0f50b132b6cbdf, type: 2}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
