@@ -372,6 +372,7 @@
      <Compile Include="Assets\Scripts\Enemies\CharacterEnemy_Base.cs" />
      <Compile Include="Assets\Scripts\Enemies\Enemy_Base.cs" />
      <Compile Include="Assets\Scripts\Enemies\Enemy_GroundUnit.cs" />
+     <Compile Include="Assets\Scripts\Enemies\Ground_Enemy_Character.cs" />
      <Compile Include="Assets\Scripts\Enemies\MachineEnemy_Base.cs" />
      <Compile Include="Assets\Scripts\Game\GameObjectsSoundController.cs" />
      <Compile Include="Assets\Scripts\Game\LevelMaster.cs" />
