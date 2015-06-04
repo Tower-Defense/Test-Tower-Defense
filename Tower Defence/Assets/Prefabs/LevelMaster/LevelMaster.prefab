@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &145384
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 419782}
+  - 114: {fileID: 11402806}
+  m_Layer: 0
+  m_Name: LevelMaster
+  m_TagString: LevelMaster
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &419782
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 145384}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 83.2394257, y: 38.1586685, z: 56.2773666}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &11402806
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 145384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cd26cab5a4a1994fb9cabbda22c4a6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AstarController: {fileID: 0}
+  waveActive: 0
+  spawnEnemies: 0
+  upgradePanelOpen: 0
+  settingsPanelOpen: 0
+  gameOver: 0
+  buildPanelOpen: 0
+  livesCount: 10
+  scoreCount: 0
+  cashCount: 1000
+  waveLevel: 0
+  difficultyMultiplier: 1
+  waveLength: 30
+  intermissionTime: 5
+  enemyPrefabs:
+  - {fileID: 106300, guid: 9cf083b1fdd6161489da4df8e08e171a, type: 2}
+  - {fileID: 159840, guid: 49d963d7f3ec10c42a920ecbaef0d99c, type: 2}
+  - {fileID: 148300, guid: c7495c5e20883014bb86407c5691043e, type: 2}
+  flyerSpawns: {fileID: 0}
+  groundSpawns: {fileID: 0}
+  respawnMinBase: 3
+  respawnMaxBase: 10
+  respawnInterval: 2.5
+  enemyCount: 0
+  onColor: {r: 1, g: .434482753, b: 0, a: 1}
+  offColor: {r: .117647052, g: .817444026, b: 1, a: 1}
+  allStructures:
+  - {fileID: 11423574, guid: 7a38708b0a8ee944a9d4e4a7fb73f96a, type: 2}
+  - {fileID: 11496884, guid: 5ac0b8734834c704e91ce25cd2ec530f, type: 2}
+  - {fileID: 11453228, guid: 7fa3d889158531e488c4147961f538f9, type: 2}
+  - {fileID: 11496856, guid: 0cd23adbcd99c1c48b9ffdb204482330, type: 2}
+  buildButtons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  waveText: {fileID: 0}
+  livesText: {fileID: 0}
+  scoreText: {fileID: 0}
+  cashText: {fileID: 0}
+  buildPanelTweener: {fileID: 0}
+  buildPanelArrowTweener: {fileID: 0}
+  settingsPanelTweener: {fileID: 0}
+  upgradePanelTweener: {fileID: 0}
+  gameOverPanelTweener: {fileID: 0}
+  placementPlanesRoot: {fileID: 0}
+  hoverMat: {fileID: 0}
+  placementLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  upgradeText: {fileID: 0}
+  upgradeBtn: {fileID: 0}
+  sellBtn: {fileID: 0}
+  BtnPlay: {fileID: 0}
+  BtnPause: {fileID: 0}
+  BtnX2: {fileID: 0}
+  GameOverText: {fileID: 0}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 145384}
+  m_IsPrefabParent: 1
