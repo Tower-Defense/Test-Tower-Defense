@@ -32,11 +32,7 @@ public class FireRay : MonoBehaviour
 
     void Update()
     {
-        if (myTarget != null)
-        {
-      //      transform.LookAt(myTarget);
-        }
-        else
+        if (myTarget == null)
         {
             myParticleSystem.Stop(true);
         }
