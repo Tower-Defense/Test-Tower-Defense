@@ -8,15 +8,16 @@ public class Attack_Jet : MachineEnemy_Base
 	public Vector2 heightRange = new Vector2(10.0f, 18.0f);
 	private float height =  10f;
 
-	// Use this for initialization
-	void Start () {
-		height = Random.Range (heightRange.x, heightRange.y);
-		//choose random height
-		transform.position
-			.Set ( transform.position.x,
-			      height,
-			      transform.position.z);
-	}
+
+    void Start()
+    {  
+        height = Random.Range (heightRange.x, heightRange.y);
+        //choose random height
+        transform.position
+            .Set ( transform.position.x,
+                  height,
+                  transform.position.z);
+    }
 	
 	// Update is called once per frame
 	void Update () {

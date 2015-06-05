@@ -18,7 +18,7 @@ public class Enemy_Base : MonoBehaviour {
 
 	//Before Start()
 	//When script initial
-    protected virtual void Start()
+    void Awake()
     {
 		//connect to levelmaster
 		levelMaster = LevelMaster.Instance;
@@ -56,7 +56,6 @@ public class Enemy_Base : MonoBehaviour {
 	/// Boom!
 	/// </summary>
 	protected void Explode () {
-		
 		//tell the level master an enemy was destroyed
 		levelMaster.enemyCount--;
 		levelMaster.cashCount += myCashValue;

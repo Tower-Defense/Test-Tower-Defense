@@ -7,7 +7,7 @@ public class Ground_Enemy_Character : CharacterEnemy_Base
     private AI_Pather pather;
     private Rigidbody rigidBody;
 
-    protected override void Start()
+   protected override void Start()
     {
         base.Start();
         pather = GetComponent<AI_Pather>();

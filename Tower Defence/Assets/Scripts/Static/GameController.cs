@@ -14,8 +14,11 @@ public static class GameController
     public static event VoidEventHandler BeforeGoToMainMenu;
     public static event VoidEventHandler BeforeGoNextLevel;
 
+    public static readonly int MainMenuLevelId = 1;
+    public static readonly int LoadingLevelId = 0;
 
-    public static int prevLevel = 1;
+
+    public static int prevLevel = MainMenuLevelId;
     public static int currentLevel
     {
         get
@@ -27,23 +30,7 @@ public static class GameController
             _currentLevel = value;
         }
     }
-    public static int _currentLevel = 1;
-
-    public static int currentMap
-    {
-        get
-        {
-            return _currentMap;
-        }
-        set
-        {
-            _currentMap = value;
-            PlayerPrefs.SetInt("MapNumber", _currentMap);
-        }
-    }
-    private static int _currentMap = 0;
-
-
+    public static int _currentLevel = MainMenuLevelId;
 
     public static bool isSound
     {
@@ -124,12 +111,13 @@ public static class GameController
         if (BeforeGoToMainMenu != null)
             BeforeGoToMainMenu();
 
-        GoNextLevel(1);
+        GoNextLevel(MainMenuLevelId);
     }
 
 
     public static void GoNextLevel(int level = 0)
     {
+        Debug.Log("GoNextLevel: " + level);
         if (BeforeGoNextLevel != null)
             BeforeGoNextLevel();
 
@@ -146,7 +134,7 @@ public static class GameController
         {
             _currentLevel = Application.loadedLevel;
         }
-        Application.LoadLevel("Loading");
+        Application.LoadLevel(LoadingLevelId);
     }
 
 

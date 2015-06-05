@@ -377,7 +377,6 @@
      <Compile Include="Assets\Scripts\Game\GameObjectsSoundController.cs" />
      <Compile Include="Assets\Scripts\Game\LevelMaster.cs" />
      <Compile Include="Assets\Scripts\Game\PlacementPlane.cs" />
-     <Compile Include="Assets\Scripts\Game\PreLoad.cs" />
      <Compile Include="Assets\Scripts\Game\Settings.cs" />
      <Compile Include="Assets\Scripts\LoadingScreen\LoadingScreen.cs" />
      <Compile Include="Assets\Scripts\Main Menu\HighScores\HighScores.cs" />

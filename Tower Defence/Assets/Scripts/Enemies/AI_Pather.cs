@@ -57,17 +57,19 @@ public class AI_Pather : MonoBehaviour {
         {
             return;
         }
+        // Wtf? Why you do this?
+        // It's look like teleport
+      //  transform.position = path.vectorPath[currentWaypoint];
+        if (Vector3.Distance(transform.position, targetPosition)   <
+            Vector3.Distance(path.vectorPath[currentWaypoint], targetPosition)) 
+        {
+            currentWaypoint++;
+        }
 
         if (currentWaypoint >= path.vectorPath.Count)
         {
             return;
         }
-
-        
-
-        // Wtf? Why you do this?
-        // It's look like teleport
-      //  transform.position = path.vectorPath[currentWaypoint];
 
         Vector3 dir = (path.vectorPath[currentWaypoint] - transform.position).normalized;
             dir*= speed * Time.fixedDeltaTime;

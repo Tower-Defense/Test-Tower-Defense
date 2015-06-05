@@ -5,7 +5,7 @@ public class CharacterEnemy_Base : Enemy_Base
 {
     protected Animation myAnimation;
 
-    void Awake()
+    protected virtual void Start()
     {
         myAnimation = GetComponent<Animation>();
     }
