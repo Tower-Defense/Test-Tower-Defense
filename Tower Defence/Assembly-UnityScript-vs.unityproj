@@ -75,12 +75,6 @@
      <Compile Include="Assets\MOBA and Tower Defense\Standard Assets\Image Effects (Pro Only)\Tonemapping.js" />
      <Compile Include="Assets\MOBA and Tower Defense\Standard Assets\Image Effects (Pro Only)\Triangles.js" />
      <Compile Include="Assets\MOBA and Tower Defense\Standard Assets\Image Effects (Pro Only)\Vignetting.js" />
-     <Compile Include="Assets\Medieval_House\Scripts\OpenDoor.js" />
-     <Compile Include="Assets\Medieval_House\Standard Assets\Character Controllers\Sources\Scripts\CharacterMotor.js" />
-     <Compile Include="Assets\Medieval_House\Standard Assets\Character Controllers\Sources\Scripts\FPSInputController.js" />
-     <Compile Include="Assets\Medieval_House\Standard Assets\Character Controllers\Sources\Scripts\PlatformInputController.js" />
-     <Compile Include="Assets\Medieval_House\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonCamera.js" />
-     <Compile Include="Assets\Medieval_House\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonController.js" />
      <Compile Include="Assets\Models\Enemies\MonsterBaseTeam\Scripts\ButtonInterface.js" />
      <Compile Include="Assets\Models\Enemies\MonsterBaseTeam\Scripts\CamControl.js" />
      <Compile Include="Assets\Models\Enemies\MonsterBaseTeam\Scripts\StringHold.js" />
