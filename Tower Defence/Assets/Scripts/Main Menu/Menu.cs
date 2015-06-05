@@ -45,8 +45,8 @@ public class Menu : MonoBehaviour {
         GameController.GoNextLevel(level);
 	}
 	
-	public void NewGame()
+	public void NewGame(int level)
 	{
-        GameController.GoNextLevel(3);
+        StartLevel(level + GameController.MainMenuLevelId);
 	}
 }
