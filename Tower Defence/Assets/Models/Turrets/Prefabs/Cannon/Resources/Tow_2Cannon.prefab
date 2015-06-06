@@ -337,7 +337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a94344a49afe064cab6282eacd6802e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myUpgrade: {fileID: 11425504, guid: 2a5a742a81c9bd84eb49c4d711fbc0b4, type: 2}
+  myUpgrade: {fileID: 11425504, guid: 2efc41cbc7bc1f64caf1a9a12da8fa08, type: 2}
   myCost: 80
   mySellMultiplier: .5
   myName: Super Cannon
