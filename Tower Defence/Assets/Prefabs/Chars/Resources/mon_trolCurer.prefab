@@ -32,6 +32,8 @@ GameObject:
   - 114: {fileID: 11485674}
   - 65: {fileID: 6592660}
   - 54: {fileID: 5424120}
+  - 114: {fileID: 11486778}
+  - 114: {fileID: 11465012}
   m_Layer: 0
   m_Name: mon_trolCurer
   m_TagString: Ground Enemy
@@ -1976,6 +1978,22 @@ MonoBehaviour:
   priority: 3
   penalty: 50
   randomStep: 5
+--- !u!114 &11465012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 106300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d50b5b815a2b85a48981858efd2e001e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myCamera: {fileID: 0}
+  lerpSmoothing: 10
+  position: {x: 0, y: 0, z: 0}
+  rigidbody: {fileID: 0}
+  rotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &11485674
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1990,6 +2008,31 @@ MonoBehaviour:
   myCashValue: 50
   speedRange: {x: 7, y: 10}
   health: 100
+--- !u!114 &11486778
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 106300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownerId: 0
+  group: 0
+  prefixBackup: -1
+  observed: {fileID: 0}
+  synchronization: 3
+  onSerializeTransformOption: 3
+  onSerializeRigidBodyOption: 2
+  ownershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 11465012}
+  ObservedComponentsFoldoutOpen: 1
+  viewIdField: 0
+  instantiationId: -1
+  isRuntimeInstantiated: 0
 --- !u!114 &11490192
 MonoBehaviour:
   m_ObjectHideFlags: 1

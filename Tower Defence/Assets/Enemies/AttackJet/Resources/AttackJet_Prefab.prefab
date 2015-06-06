@@ -122,6 +122,7 @@ GameObject:
   - 114: {fileID: 11422572}
   - 114: {fileID: 11482108}
   - 114: {fileID: 11434290}
+  - 114: {fileID: 11448374}
   m_Layer: 8
   m_Name: AttackJet_Prefab
   m_TagString: Air Enemy
@@ -854,11 +855,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e029d5d292a2d674ea7f9df741d9dba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smokeTrail: {fileID: 1500008}
-  explosionEffect: {fileID: 100000, guid: c4adc3d0896b4634b8ad116aebefbf2c, type: 2}
   myCashValue: 50
   speedRange: {x: 7, y: 10}
   health: 100
+  smokeTrail: {fileID: 1500008}
+  explosionEffect: {fileID: 100000, guid: c4adc3d0896b4634b8ad116aebefbf2c, type: 2}
   compass: {fileID: 491656}
   heightRange: {x: 10, y: 18}
 --- !u!114 &11434290
@@ -872,6 +873,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5087c308dfce3834d92d00a6d2d5dede, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11448374
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d50b5b815a2b85a48981858efd2e001e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myCamera: {fileID: 0}
+  lerpSmoothing: 10
+  position: {x: 0, y: 0, z: 0}
+  rigidbody: {fileID: 0}
+  rotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &11482108
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -887,12 +904,12 @@ MonoBehaviour:
   group: 0
   prefixBackup: -1
   observed: {fileID: 0}
-  synchronization: 0
+  synchronization: 3
   onSerializeTransformOption: 3
   onSerializeRigidBodyOption: 2
   ownershipTransfer: 0
   ObservedComponents:
-  - {fileID: 0}
+  - {fileID: 11448374}
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 0
   instantiationId: -1

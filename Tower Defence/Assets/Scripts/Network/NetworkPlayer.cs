@@ -1,4 +1,4 @@
-﻿/*
+﻿
 using UnityEngine;
 using System.Collections;
 public class NetworkPlayer : Photon.MonoBehaviour
@@ -7,24 +7,32 @@ public class NetworkPlayer : Photon.MonoBehaviour
     bool isAlive = true;
     public float lerpSmoothing = 10.0f;
     public Vector3 position;
+    public Rigidbody rigidbody;
     public Quaternion rotation;
+    private float lastSynchronizationTime = 0f;
+    private float syncDelay = 0f;
+    private float syncTime = 0f;
+    private Vector3 syncStartPosition = Vector3.zero;
+    private Vector3 syncEndPosition = Vector3.zero;
     // Use this for initialization
     void Start()
     {
-        if (photonView.isMine)
+        rigidbody = GetComponent<Rigidbody>();
+       /* if (photonView.isMine)
         {
-            gameObject.name = "Me";
+            
             myCamera.SetActive(true);
  
         }
         else
         {
-            gameObject.name = "Network Player";
+            
             StartCoroutine("Alive");
         }
+        */
     }
     void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
-    {
+    {/*
         if (stream.isWriting)
         {
             stream.SendNext(transform.position);
@@ -34,7 +42,26 @@ public class NetworkPlayer : Photon.MonoBehaviour
         {
             position = (Vector3)stream.ReceiveNext();
             rotation = (Quaternion)stream.ReceiveNext();
+        }*/
+
+        if (stream.isWriting)
+        {
+            stream.SendNext(rigidbody.position);
+            stream.SendNext(rigidbody.velocity);
         }
+        else
+        {
+            Vector3 syncPosition = (Vector3)stream.ReceiveNext();
+            Vector3 syncVelocity = (Vector3)stream.ReceiveNext();
+
+            syncTime = 0f;
+            syncDelay = Time.time - lastSynchronizationTime;
+            lastSynchronizationTime = Time.time;
+
+            syncEndPosition = syncPosition + syncVelocity * syncDelay;
+            syncStartPosition = rigidbody.position;
+        }
+
     }
     //while alive do this state-machine
     IEnumerator Alive()
@@ -47,4 +74,3 @@ public class NetworkPlayer : Photon.MonoBehaviour
         }
     }
 }
-*/
