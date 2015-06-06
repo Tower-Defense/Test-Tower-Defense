@@ -406,7 +406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a94344a49afe064cab6282eacd6802e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myUpgrade: {fileID: 11442426, guid: 72eb35f4963c20245bea471b983d7cc1, type: 2}
+  myUpgrade: {fileID: 11442426, guid: 0c0f390753893fb419b82bcbb721f5dd, type: 2}
   myCost: 70
   mySellMultiplier: .5
   myName: Laser

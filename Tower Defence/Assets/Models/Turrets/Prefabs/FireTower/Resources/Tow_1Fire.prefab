@@ -555,7 +555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08e6b00e4434b5d4b9e503e19b8c3bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myUpgrade: {fileID: 11488876, guid: fd15b8db030ce5543bd8137839360e9c, type: 2}
+  myUpgrade: {fileID: 11488876, guid: 5cd4221f371b84349a474d6d5da11a9b, type: 2}
   myCost: 65
   mySellMultiplier: .5
   myName: Fire

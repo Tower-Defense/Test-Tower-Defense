@@ -401,7 +401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 761f601bc6dc8e14dad0f0efca30c71c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myUpgrade: {fileID: 11490508, guid: eb7b8d2c185b5b74c94312e29a88edbb, type: 2}
+  myUpgrade: {fileID: 11490508, guid: ba51e97300415264eb72993969ea67ea, type: 2}
   myCost: 80
   mySellMultiplier: .5
   myName: Rocket
