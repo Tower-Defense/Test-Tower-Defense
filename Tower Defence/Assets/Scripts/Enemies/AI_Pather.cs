@@ -4,13 +4,14 @@ using System.Collections.Generic;
 using Pathfinding;
 using Pathfinding.RVO;
 
-public class AI_Pather : MonoBehaviour {
+public class AI_Pather : MonoBehaviour
+{
 
-	public Vector3 targetPosition;
+    public Vector3 targetPosition;
     public Transform enemyFront;
     public float turnSpeed = 10.0f;
 
-	public Seeker seeker;
+    public Seeker seeker;
     public Path path;
     public int currentWaypoint;
 
@@ -22,33 +23,41 @@ public class AI_Pather : MonoBehaviour {
 
     public bool isStop = false;
 
-	void Start() {
+    void Start()
+    {
         targetPosition = GameObject.FindGameObjectWithTag("PlayerBase")
             .GetComponent<Transform>()
             .position;
         seeker = GetComponent<Seeker>();
         characterController = GetComponent<CharacterController>();
         GetNewPath();
-        
-	}
+
+    }
 
     public void GetNewPath()
     {
         seeker.StartPath(transform.position, targetPosition, OnPathComplete);
     }
 
-	public void OnPathComplete( Path p ) {
+    public void OnPathComplete(Path p)
+    {
         if (!p.error)
         {
             path = p;
             currentWaypoint = 0;
+           if (currentWaypoint < path.vectorPath.Count - 1 &&
+           (Vector3.Distance(transform.position, path.vectorPath[currentWaypoint + 1]) <
+           Vector3.Distance(path.vectorPath[currentWaypoint], path.vectorPath[currentWaypoint + 1])))
+            {
+                currentWaypoint++;
+            }
             Debug.Log(path.vectorPath.Count);
         }
         else
         {
             Debug.Log(p.error);
         }
-	}
+    }
 
     void FixedUpdate()
     {
@@ -57,23 +66,17 @@ public class AI_Pather : MonoBehaviour {
         {
             return;
         }
-        // Wtf? Why you do this?
-        // It's look like teleport
-      //  transform.position = path.vectorPath[currentWaypoint];
-        if (Vector3.Distance(transform.position, targetPosition)   <
-            Vector3.Distance(path.vectorPath[currentWaypoint], targetPosition)) 
-        {
-            currentWaypoint++;
-        }
-
         if (currentWaypoint >= path.vectorPath.Count)
         {
             return;
         }
+        // Wtf? Why you do this?
+        // It's look like teleport
+        //  transform.position = path.vectorPath[currentWaypoint];
 
         Vector3 dir = (path.vectorPath[currentWaypoint] - transform.position).normalized;
-            dir*= speed * Time.fixedDeltaTime;
-       
+        dir *= speed * Time.fixedDeltaTime;
+
         characterController.SimpleMove(dir);
 
 
