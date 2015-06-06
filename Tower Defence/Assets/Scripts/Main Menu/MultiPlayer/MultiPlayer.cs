@@ -162,7 +162,7 @@ public class MultiPlayer : Photon.MonoBehaviour
 
     public void StartGame()
     {
-        PlayerPrefs.SetInt("LoadLevel", levelNum);
+        GameController.currentLevel = 2;
         PhotonNetwork.LoadLevel(0);
     }
 
