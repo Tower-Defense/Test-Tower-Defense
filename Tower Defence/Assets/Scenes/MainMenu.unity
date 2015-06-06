@@ -1317,7 +1317,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Level4
+  m_Text: Winter Assault
 --- !u!222 &170354298
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3881,7 +3881,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Level3
+  m_Text: Dust
 --- !u!222 &561112965
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7118,7 +7118,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Level2
+  m_Text: Ork's Fate
 --- !u!222 &881763392
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10581,7 +10581,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Level6
+  m_Text: Fortress
 --- !u!222 &1321762964
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11796,7 +11796,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Level5
+  m_Text: Final Stand
 --- !u!222 &1495006924
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12506,7 +12506,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: d5a9cad1608b124418e57184f1dfef25, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 106c85a78210610469ae2575d09152c1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13809,7 +13809,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Level1
+  m_Text: First Look
 --- !u!222 &1892244295
 CanvasRenderer:
   m_ObjectHideFlags: 0
